@@ -312,7 +312,7 @@ tinymce.PluginManager.add('media', function(editor, url) {
 					);
 				}
 			} else if (data.type == "script") {
-				html += '<script src="../assets/' + data.source1 + '"></script>';
+				html += '<script src="../../assets/' + data.source1 + '"></script>';
 			} else {
 				if (editor.settings.video_template_callback) {
 					html = editor.settings.video_template_callback(data);

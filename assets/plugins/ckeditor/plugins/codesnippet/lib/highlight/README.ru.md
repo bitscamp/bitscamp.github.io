@@ -16,7 +16,7 @@ Highlight.js нужен для подсветки синтаксиса в при
 
 ```html
 <link rel="stylesheet" href="styles/default.css">
-<script src="../assets/highlight.pack.js"></script>
+<script src="highlight.pack.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 ```
 
