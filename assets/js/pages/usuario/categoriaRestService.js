@@ -8,7 +8,7 @@ function buscarCategoria(idCategoria){
             console.log(result);
         },
         error: function (error) {
-            swal("Erro :(", "Não foi possível buscar a categoria: "+idCategoria, "error");
+            swal("Erro :(", "Não foi possível buscar a categoria: '"+idCategoria+"'", "error");
             console.log(error);
         }
     });

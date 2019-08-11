@@ -26,6 +26,9 @@
     <!-- Morris Chart Css-->
     <link href="assets/plugins/morrisjs/morris.css" rel="stylesheet" />
 
+    <!-- SweetAlert Plugin CSS -->
+    <link href="assets/plugins/sweetalert/sweetalert.css" rel="stylesheet" type="text/css" />
+
     <!-- Custom Css -->
     <link href="assets/css/style.css" rel="stylesheet">
 
@@ -115,7 +118,7 @@
                         <ul class="dropdown-menu pull-right">
                             <li><a href="javascript:void(0);"><i class="material-icons">person</i>Perfil</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="javascript:void(0);"><i class="material-icons">input</i>Sair</a></li>
+                            <li><a id="sair" class="page-access"><i class="material-icons">input</i>Sair</a></li>
                         </ul>
                     </div>
                 </div>
@@ -139,12 +142,12 @@
                         </a>
                         <ul class="ml-menu">
                             <li>
-                                <a href="/manter_usuario" class="menu-toggle">
+                                <a id="manter_usuario" class="menu-toggle page-access">
                                     <span>Usuários</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="/manter_categoria" class="menu-toggle">
+                                <a id="manter_categoria" class="menu-toggle page-access">
                                     <span>Categoria - Usuário</span>
                                 </a>
                             </li>
@@ -158,7 +161,7 @@
                         </a>
                         <ul class="ml-menu">
                             <li>
-                                <a href="/manter_perfil" class="menu-toggle">
+                                <a id="manter_perfil" class="menu-toggle page-access">
                                     <span>Perfil - Cliente</span>
                                 </a>
                             </li>
@@ -172,7 +175,7 @@
                         </a>
                         <ul class="ml-menu">
                             <li>
-                                <a href="/manter_loja" class="menu-toggle">
+                                <a id="manter_loja" class="menu-toggle page-access">
                                     <span>Lojas Parceiras</span>
                                 </a>
                             </li>
@@ -271,6 +274,9 @@
     <!-- Waves Effect Plugin Js -->
     <script src="assets/plugins/node-waves/waves.js"></script>
 
+    <!-- SweetAlert Plugin Js -->
+    <script src="assets/plugins/sweetalert/sweetalert.min.js"></script>
+
     <!-- Jquery CountTo Plugin Js -->
     <script src="assets/plugins/jquery-countto/jquery.countTo.js"></script>
 
@@ -279,9 +285,10 @@
 
     <!-- Custom Js -->
     <script src="assets/js/admin.js"></script>
-    <script src="assets/js/pages/index.js"></script>
+    <script src="assets/js/main.js"></script>
 
     <!-- Pagina -->
+    <script src="assets/js/pages/index.js"></script>
 
 </body>
 </html>
