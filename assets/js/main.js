@@ -7,9 +7,9 @@ function getApi(id) {
     let url = window.location.origin;
     $.ajax({
         method : 'GET',
-        url : 'https://bitscamp.herokuapp.com/'+id,
+        url : 'https://bitscamp.herokuapp.com:8080/'+id,
         success : function (result) {
-            location.href = url+id;
+            location.href = result+id;
             console.log(result);
         },
         error: function (error) {
