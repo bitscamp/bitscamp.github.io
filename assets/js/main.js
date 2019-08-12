@@ -18,3 +18,7 @@ function getApi(id) {
         }
     });
 }
+
+function goHome() {
+    getApi("");
+}
