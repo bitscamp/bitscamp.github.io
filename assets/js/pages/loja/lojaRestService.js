@@ -2,7 +2,7 @@
 function buscarLoja(idLoja){
     $.ajax({
         method : 'GET',
-        url : '/lojaParceira/'+idLoja,
+        url :  URL.BACKEND+'lojaParceira/'+idLoja,
         success : function (result) {
             criarTabelaLoja(result);
             console.log(result);
@@ -18,7 +18,7 @@ function buscarLoja(idLoja){
 function buscarLojasAll(){
     $.ajax({
         method : 'GET',
-        url : '/lojaParceira',
+        url :  URL.BACKEND+'lojaParceira',
         success : function (result) {
             $("#lojaResult").html('');
             criarTabelaLojas(result);
@@ -35,7 +35,7 @@ function buscarLojasAll(){
 function adicionarLoja(loja) {
     $.ajax({
         method : 'POST',
-        url : '/lojaParceira',
+        url :  URL.BACKEND+'lojaParceira',
         contentType: 'application/json',
         data : loja,
         success : function (result) {
@@ -54,7 +54,7 @@ function adicionarLoja(loja) {
 function alterarLoja(loja) {
     $.ajax({
         method : 'POST',
-        url : '/lojaParceira',
+        url :  URL.BACKEND+'lojaParceira',
         contentType: 'application/json',
         data : loja,
         success : function (result) {
@@ -73,7 +73,7 @@ function alterarLoja(loja) {
 function removerLoja(idLoja) {
     $.ajax({
         method : 'DELETE',
-        url : '/lojaParceira/'+idLoja,
+        url :  URL.BACKEND+'lojaParceira/'+idLoja,
         success : function (result) {
             swal("Sucesso :)", "Loja Removido: "+idLoja, "success");
             limparLojaDel();
@@ -91,7 +91,7 @@ function removerLoja(idLoja) {
 function buscarLojaAlt(idLoja) {
     $.ajax({
         method : 'GET',
-        url : '/lojaParceira/'+idLoja,
+        url :  URL.BACKEND+'lojaParceira/'+idLoja,
         success : function (result) {
             preencherLojaAlt(result);
             console.log(result);
@@ -107,7 +107,7 @@ function buscarLojaAlt(idLoja) {
 function buscarLojaDel(idLojaDel){
     $.ajax({
         method : 'GET',
-        url : '/lojaParceira/'+idLojaDel,
+        url :  URL.BACKEND+'lojaParceira/'+idLojaDel,
         success : function (result) {
             criarTabelaLojaDel(result);
             console.log(result);
