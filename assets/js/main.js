@@ -9,7 +9,7 @@ function getApi(id) {
         method : 'GET',
         url : 'https://bitscamp.herokuapp.com/'+id,
         success : function (result) {
-            location.href = result+id;
+            location.href = result;
             console.log(result);
         },
         error: function (error) {
