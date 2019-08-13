@@ -37,7 +37,7 @@ function criarTabelaUsuarios(usuario) {
     });
 }
 
-// Criar tabela com um usuário
+// Criar tabela com um Usuário
 function criarTabelaUsuario(usuario) {
     let table = `
     <div class="col-md-12">
@@ -72,7 +72,7 @@ function criarTabelaUsuario(usuario) {
     });
 }
 
-// Criar tabela com um usuário p/ deletar
+// Criar tabela com um Usuário p/ deletar
 function criarTabelaUsuarioDel(usuario) {
     let table = `
     <div class="col-md-12">

@@ -31,7 +31,7 @@ function buscarCategoriasAll(){
     });
 }
 
-// Função p/ cadastrar usuário
+// Função p/ cadastrar Usuário
 function adicionarCategoria(categoria) {
     $.ajax({
         method : 'POST',
@@ -50,7 +50,7 @@ function adicionarCategoria(categoria) {
     });
 };
 
-// Função p/ alterar usuário
+// Função p/ alterar Usuário
 function alterarCategoria(categoria) {
     $.ajax({
         method : 'POST',
@@ -87,7 +87,7 @@ function removerCategoria(idCategoria) {
 }
 
 
-// Função p/ buscar 1 usuário p/ alteração 
+// Função p/ buscar 1 Usuário p/ alteração
 function buscarCategoriaAlt(idCategoria) {
     $.ajax({
         method : 'GET',
@@ -103,7 +103,7 @@ function buscarCategoriaAlt(idCategoria) {
     });
 }
 
-// Função p/ buscar 1 usuário p/ remover
+// Função p/ buscar 1 Usuário p/ remover
 function buscarCategoriaDel(idCategoriaDel){
     $.ajax({
         method : 'GET',

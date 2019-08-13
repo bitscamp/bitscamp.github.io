@@ -31,7 +31,7 @@ function buscarPerfisAll(){
     });
 }
 
-// Função p/ cadastrar usuário
+// Função p/ cadastrar Usuário
 function adicionarPerfil(perfil) {
     $.ajax({
         method : 'POST',
@@ -50,7 +50,7 @@ function adicionarPerfil(perfil) {
     });
 };
 
-// Função p/ alterar usuário
+// Função p/ alterar Usuário
 function alterarPerfil(perfil) {
     $.ajax({
         method : 'POST',
@@ -87,7 +87,7 @@ function removerPerfil(idPerfil) {
 }
 
 
-// Função p/ buscar 1 usuário p/ alteração 
+// Função p/ buscar 1 Usuário p/ alteração
 function buscarPerfilAlt(idPerfil) {
     $.ajax({
         method : 'GET',
@@ -103,7 +103,7 @@ function buscarPerfilAlt(idPerfil) {
     });
 }
 
-// Função p/ buscar 1 usuário p/ remover
+// Função p/ buscar 1 Usuário p/ remover
 function buscarPerfilDel(idPerfilDel){
     $.ajax({
         method : 'GET',

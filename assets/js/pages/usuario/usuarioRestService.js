@@ -8,7 +8,7 @@ function buscarUsuario(idUsuario){
             console.log(result);
         },
         error: function (error) {
-            swal("Erro :(", "Não foi possível buscar o usuário: "+idUsuario, "error");
+            swal("Erro :(", "Não foi possível buscar o Usuário: "+idUsuario, "error");
             console.log(error);
         }
     });
@@ -25,13 +25,13 @@ function buscarUsuariosAll(){
             console.log(result);
         },
         error: function (error) {
-            swal("Erro :(", "Não foi possível buscar os usuário: ", "warning");
+            swal("Erro :(", "Não foi possível buscar os Usuário: ", "warning");
             console.log(error);
         }
     });
 }
 
-// Função p/ cadastrar usuário
+// Função p/ cadastrar Usuário
 function adicionarUsuario(usuario) {
     $.ajax({
         method : 'POST',
@@ -44,13 +44,13 @@ function adicionarUsuario(usuario) {
             console.log(result);
         },
         error: function (error) {
-            swal("Erro :(", "Não foi possível adicionar o usuário.", "error");
+            swal("Erro :(", "Não foi possível adicionar o Usuário.", "error");
             console.log(error);
         }
     });
 };
 
-// Função p/ alterar usuário
+// Função p/ alterar Usuário
 function alterarUsuario(usuario) {
     $.ajax({
         method : 'POST',
@@ -63,7 +63,7 @@ function alterarUsuario(usuario) {
             console.log(result);
         },
         error: function (error) {
-            swal("Erro :(", "Não foi possível alterar o usuário.", "error");
+            swal("Erro :(", "Não foi possível alterar o Usuário.", "error");
             console.log(error);
         }
     });
@@ -80,14 +80,14 @@ function removerUsuario(idUsuario) {
             console.log(result);
         },
         error: function (error) {
-            swal("Erro :(", "Não foi possível remover o usuário: "+idUsuario, "error");
+            swal("Erro :(", "Não foi possível remover o Usuário: "+idUsuario, "error");
             console.log(error);
         }
     });
 }
 
 
-// Função p/ buscar 1 usuário p/ alteração 
+// Função p/ buscar 1 Usuário p/ alteração
 function buscarUsuarioAlt(idUsuario) {
     $.ajax({
         method : 'GET',
@@ -97,13 +97,13 @@ function buscarUsuarioAlt(idUsuario) {
             console.log(result);
         },
         error: function (error) {
-            swal("Erro :(", "Não foi possível encontrar o usuário: "+idUsuario, "error");
+            swal("Erro :(", "Não foi possível encontrar o Usuário: "+idUsuario, "error");
             console.log(error);
         }
     });
 }
 
-// Função p/ buscar 1 usuário p/ remover
+// Função p/ buscar 1 Usuário p/ remover
 function buscarUsuarioDel(idUsuarioDel){
     $.ajax({
         method : 'GET',
@@ -113,7 +113,7 @@ function buscarUsuarioDel(idUsuarioDel){
             console.log(result);
         },
         error: function (error) {
-            swal("Erro :(", "Não foi possível buscar o usuário: "+idUsuarioDel, "error");
+            swal("Erro :(", "Não foi possível buscar o Usuário: "+idUsuarioDel, "error");
             console.log(error);
         }
     });

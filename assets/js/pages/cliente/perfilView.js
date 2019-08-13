@@ -33,7 +33,7 @@ function criarTabelaPerfis(perfis) {
     });
 }
 
-// Criar tabela com um usuário
+// Criar tabela com um Usuário
 function criarTabelaPerfil(perfil) {
     let table = `
     <div class="col-md-12">
@@ -62,7 +62,7 @@ function criarTabelaPerfil(perfil) {
     });
 }
 
-// Criar tabela com um usuário p/ deletar
+// Criar tabela com um Usuário p/ deletar
 function criarTabelaPerfilDel(perfil) {
     let table = `
     <div class="col-md-12">
