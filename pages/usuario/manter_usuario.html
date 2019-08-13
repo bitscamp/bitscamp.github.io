@@ -17,6 +17,9 @@
     <!-- Bootstrap Core Css -->
     <link href="../../assets/plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
 
+    <!-- Bootstrap Select Css -->
+    <link href="../../assets/plugins/bootstrap-select/css/bootstrap-select.css" rel="stylesheet" />
+
     <!-- Waves Effect Css -->
     <link href="../../assets/plugins/node-waves/waves.css" rel="stylesheet" />
 
@@ -471,15 +474,13 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                        
+
                                                 <div class="col-md-3">
                                                     <div class="box-col-group">
                                                         <label for="categoriaUsuarioAlt">Categoria</label>
-                                                        <div class="input-group">
-                                                            <div class="form-line focused">
-                                                                <input type="text" id="categoriaUsuarioAlt" name="categoriaUsuarioAlt" class="form-control date" placeholder="Categoria do usuário">
-                                                            </div>
-                                                        </div>
+                                                        <select id="categoriaUsuarioAlt" class="form-control">
+                                                            <option>Selecione uma Categoria</option>
+                                                        </select>
                                                     </div>
                                                 </div>
 
