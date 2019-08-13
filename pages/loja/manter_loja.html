@@ -296,7 +296,19 @@
                             <!-- Tab Pane Cadastrar Usuário-->
                             <div role="tabpanel" class="tab-pane fade" id="cadastrar">
                                 <div class="row">
-                                    <div class="col-md-12">
+                                    <div class="col-md-3">
+                                        <div class="box-col-group">
+                                            <label for="cnpjLojaAdd">CNPJ</label>
+                                            <div class="input-group">
+                                                <div class="form-line">
+                                                    <input type="text" id="cnpjLojaAdd" name="cnpjLojaAdd"
+                                                           class="form-control" placeholder="CNPJ da Loja">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-9">
                                         <div class="box-col-group">
                                             <button type="button"
                                                     class="btn bg-green btn-circle-lg waves-effect waves-circle waves-float pull-right"
@@ -334,27 +346,13 @@
 
                                     <div class="col-md-3">
                                         <div class="box-col-group">
-                                            <label for="cnpjLojaAdd">CNPJ</label>
-                                            <div class="input-group">
-                                                <div class="form-line">
-                                                    <input type="text" id="cnpjLojaAdd" name="cnpjLojaAdd"
-                                                           class="form-control" placeholder="CNPJ da Loja">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-3">
-                                        <div class="box-col-group">
                                             <label for="estadoLojaAdd">Estado</label>
                                             <select id="estadoLojaAdd" class="form-control">
                                                 <option>Selecione um Estado</option>
                                             </select>
                                         </div>
                                     </div>
-                                </div>
 
-                                <div class="row">
                                     <div class="col-md-3">
                                         <div class="box-col-group">
                                             <label for="municipioLojaAdd">Municipio</label>
@@ -366,6 +364,10 @@
                                             </div>
                                         </div>
                                     </div>
+                                </div>
+
+                                <div class="row">
+
                                     <div class="col-md-3">
                                         <div class="box-col-group">
                                             <label for="enderecoLojaAdd">Endereço</label>
