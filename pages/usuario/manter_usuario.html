@@ -266,10 +266,10 @@
                                                                placeholder="Código do Usuário">
                                                     </div>
                                                     <span class="input-group-addon">
-                                                                <a id="buscarUsuario" href="javascript:void(0);">
-                                                                    <i class="material-icons">search</i>
-                                                                </a>
-                                                            </span>
+                                                        <a id="buscarUsuario" href="javascript:void(0);">
+                                                            <i class="material-icons">search</i>
+                                                        </a>
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
@@ -296,21 +296,29 @@
 
                             <!-- Tab Pane Cadastrar Usuário-->
                             <div role="tabpanel" class="tab-pane fade" id="cadastrar">
+
                                 <div class="row">
-                                    <div class="col-md-12">
 
-                                        <div class="col-md-12">
-                                            <div class="box-col-group">
-                                                <button type="button"
-                                                        class="btn bg-green btn-circle-lg waves-effect waves-circle waves-float pull-right m-r-10"
-                                                        id="adicionarUsuario">
-                                                    <i class="material-icons">save</i>
-                                                </button>
-                                            </div>
+                                    <div class="col-md-2">
+                                        <div class="box-col-group">
+                                            <label for="categoriaUsuarioAdd">Categoria</label>
+                                            <select id="categoriaUsuarioAdd" class="form-control">
+                                                <option>Categoria do Usuário</option>
+                                            </select>
                                         </div>
+                                    </div>
 
+                                    <div class="col-md-10">
+                                        <div class="box-col-group">
+                                            <button type="button"
+                                                    class="btn bg-green btn-circle-lg waves-effect waves-circle waves-float pull-right m-r-10"
+                                                    id="adicionarUsuario">
+                                                <i class="material-icons">save</i>
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
+
                                 <div class="row">
                                     <div class="col-md-3">
                                         <div class="box-col-group">
@@ -340,15 +348,6 @@
 
                                     <div class="col-md-3">
                                         <div class="box-col-group">
-                                            <label for="categoriaUsuarioAdd">Categoria</label>
-                                            <select id="categoriaUsuarioAdd" class="form-control">
-                                                <option>Selecione uma Categoria</option>
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-3">
-                                        <div class="box-col-group">
                                             <label for="perfilUsuarioAdd">Perfil</label>
                                             <select id="perfilUsuarioAdd" class="form-control">
                                                 <option>Selecione um Perfil</option>
@@ -356,9 +355,6 @@
                                         </div>
                                     </div>
 
-                                </div>
-
-                                <div class="row">
                                     <div class="col-md-3">
                                         <div class="box-col-group">
                                             <label for="estadoUsuarioAdd">Estado</label>
@@ -367,7 +363,9 @@
                                             </select>
                                         </div>
                                     </div>
+                                </div>
 
+                                <div class="row">
                                     <div class="col-md-3">
                                         <div class="box-col-group">
                                             <label for="municipioUsuarioAdd">Municipio</label>
@@ -408,9 +406,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                <div class="row">
                                     <div class="col-md-3">
                                         <div class="box-col-group">
                                             <label for="telefoneUsuarioAdd">Telefone</label>
@@ -425,6 +421,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                             </div>
                             <!-- #END Tab Pane Cadastrar Usuário-->
 
@@ -491,7 +488,7 @@
                                         <div class="box-col-group">
                                             <label for="categoriaUsuarioAlt">Categoria</label>
                                             <select id="categoriaUsuarioAlt" class="form-control">
-                                                <option>Selecione uma Categoria</option>
+                                                <option>Categoria do Usuário</option>
                                             </select>
                                         </div>
                                     </div>
