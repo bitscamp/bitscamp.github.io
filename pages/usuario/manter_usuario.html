@@ -418,145 +418,146 @@
                                     <!-- Tab Pane Alterar Usuário-->
                                     <div role="tabpanel" class="tab-pane fade" id="alterar">
                                         <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="col-md-3">
-                                                    <div class="box-col-group">
-                                                        <label for="idUsuarioAlt">Código</label>
-                                                        <div class="input-group">
-                                                            <div class="form-line focused">
-                                                                <input type="text" id="idUsuarioAlt" name="idUsuarioAlt" class="form-control date" placeholder="Código do Usuário">
-                                                            </div>
-                                                            <span class="input-group-addon">
+                                            <div class="col-md-3">
+                                                <div class="box-col-group">
+                                                    <label for="idUsuarioAlt">Código</label>
+                                                    <div class="input-group">
+                                                        <div class="form-line focused">
+                                                            <input type="text" id="idUsuarioAlt" name="idUsuarioAlt"
+                                                                   class="form-control date"
+                                                                   placeholder="Código do Usuário">
+                                                        </div>
+                                                        <span class="input-group-addon">
                                                                 <a id="buscarUsuarioAlt" href="javascript:void(0);">
                                                                     <i class="material-icons">search</i>
                                                                 </a>
                                                             </span>
-                                                        </div>
                                                     </div>
                                                 </div>
-                                                
-                                                <div class="col-md-9">
-                                                    <div class="box-col-group">
-                                                        <button type="button" class="btn bg-green btn-circle-lg waves-effect waves-circle waves-float pull-right m-r-10" id="alterarUsuario">
-                                                            <i class="material-icons">save</i>
-                                                        </button>
-                                                    </div>
-                                                </div>
+                                            </div>
 
+                                            <div class="col-md-9">
+                                                <div class="box-col-group">
+                                                    <button type="button"
+                                                            class="btn bg-green btn-circle-lg waves-effect waves-circle waves-float pull-right m-r-10"
+                                                            id="alterarUsuario">
+                                                        <i class="material-icons">save</i>
+                                                    </button>
+                                                </div>
                                             </div>
                                         </div>
 
                                         <div class="row">
-                                            <div class="col-md-12">
-                                        
-                                                <div class="col-md-3">
-                                                    <div class="box-col-group">
-                                                        <label for="nomeUsuarioAlt">Nome</label>
-                                                        <div class="input-group">
-                                                            <div class="form-line focused">
-                                                                <input type="text" id="nomeUsuarioAlt" name="nomeUsuarioAlt" class="form-control date" placeholder="Nome do Usuário">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                        
-                                                <div class="col-md-3">
-                                                    <div class="box-col-group">
-                                                        <label for="emailUsuarioAlt">E-mail</label>
-                                                        <div class="input-group">
-                                                            <div class="form-line focused">
-                                                                <input type="text" id="emailUsuarioAlt" name="emailUsuarioAlt" class="form-control date" placeholder="E-mail do Usuário">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
 
-                                                <div class="col-md-3">
-                                                    <div class="box-col-group">
-                                                        <label for="categoriaUsuarioAlt">Categoria</label>
-                                                        <select id="categoriaUsuarioAlt" class="form-control">
-                                                            <option>Selecione uma Categoria</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-md-3">
-                                                    <div class="box-col-group">
-                                                        <label for="municipioUsuarioAlt">Municipio</label>
-                                                        <div class="input-group">
-                                                            <div class="form-line">
-                                                                <input type="text" id="municipioUsuarioAlt" name="municipioUsuarioAlt" class="form-control date" placeholder="Município do Usuário">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="row">
-                                            <div class="col-md-12">
-
-                                                <div class="col-md-3">
-                                                    <div class="box-col-group">
-                                                        <label for="enderecoUsuarioAlt">Endereço</label>
-                                                        <div class="input-group">
-                                                            <div class="form-line">
-                                                                <input type="text" id="enderecoUsuarioAlt" name="enderecoUsuarioAlt" class="form-control date" placeholder="Endereço do Usuário">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                        
-                                                <div class="col-md-3">
-                                                    <div class="box-col-group">
-                                                        <label for="cepUsuarioAlt">CEP</label>
-                                                        <div class="input-group">
-                                                            <div class="form-line">
-                                                                <input type="text" id="cepUsuarioAlt" name="cepUsuarioAlt" class="form-control date" placeholder="CEP do Usuário">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-md-3">
-                                                    <div class="box-col-group">
-                                                        <label for="perfilUsuarioAlt">Perfil</label>
-                                                        <select id="perfilUsuarioAlt" class="form-control">
-                                                            <option>Selecione um Perfil</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-md-3">
-                                                    <div class="box-col-group">
-                                                        <label for="telefoneUsuarioAlt">Telefone</label>
-                                                        <div class="input-group">
-                                                            <div class="form-line">
-                                                                <input type="text" id="telefoneUsuarioAlt" name="telefoneUsuarioAlt" class="form-control date" placeholder="Telefone do Usuário">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                        
-                                            </div>
-                                        </div>
-
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="col-md-3">
-                                                    <div class="box-col-group">
-                                                        <label for="estadoUsuarioAlt">Estado</label>
-                                                        <div class="input-group">
-                                                            <div class="form-line">
-                                                                <input type="text" id="estadoUsuarioAlt" name="estadoUsuarioAlt" class="form-control date" placeholder="Estado do Usuário">
-                                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="box-col-group">
+                                                    <label for="nomeUsuarioAlt">Nome</label>
+                                                    <div class="input-group">
+                                                        <div class="form-line focused">
+                                                            <input type="text" id="nomeUsuarioAlt"
+                                                                   name="nomeUsuarioAlt" class="form-control date"
+                                                                   placeholder="Nome do Usuário">
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
 
+                                            <div class="col-md-3">
+                                                <div class="box-col-group">
+                                                    <label for="emailUsuarioAlt">E-mail</label>
+                                                    <div class="input-group">
+                                                        <div class="form-line focused">
+                                                            <input type="text" id="emailUsuarioAlt"
+                                                                   name="emailUsuarioAlt" class="form-control date"
+                                                                   placeholder="E-mail do Usuário">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-3">
+                                                <div class="box-col-group">
+                                                    <label for="categoriaUsuarioAlt">Categoria</label>
+                                                    <select id="categoriaUsuarioAlt" class="form-control">
+                                                        <option>Selecione uma Categoria</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-3">
+                                                <div class="box-col-group">
+                                                    <label for="estadoUsuarioAlt">Estado</label>
+                                                    <select id="estadoUsuarioAlt" class="form-control">
+                                                        <option>Selecione um Estado</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-3">
+                                                <div class="box-col-group">
+                                                    <label for="municipioUsuarioAlt">Municipio</label>
+                                                    <div class="input-group">
+                                                        <div class="form-line">
+                                                            <input type="text" id="municipioUsuarioAlt"
+                                                                   name="municipioUsuarioAlt"
+                                                                   class="form-control date"
+                                                                   placeholder="Município do Usuário">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-3">
+                                                <div class="box-col-group">
+                                                    <label for="enderecoUsuarioAlt">Endereço</label>
+                                                    <div class="input-group">
+                                                        <div class="form-line">
+                                                            <input type="text" id="enderecoUsuarioAlt"
+                                                                   name="enderecoUsuarioAlt"
+                                                                   class="form-control date"
+                                                                   placeholder="Endereço do Usuário">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-3">
+                                                <div class="box-col-group">
+                                                    <label for="cepUsuarioAlt">CEP</label>
+                                                    <div class="input-group">
+                                                        <div class="form-line">
+                                                            <input type="text" id="cepUsuarioAlt"
+                                                                   name="cepUsuarioAlt" class="form-control date"
+                                                                   placeholder="CEP do Usuário">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-3">
+                                                <div class="box-col-group">
+                                                    <label for="perfilUsuarioAlt">Perfil</label>
+                                                    <select id="perfilUsuarioAlt" class="form-control">
+                                                        <option>Selecione um Perfil</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-3">
+                                                <div class="box-col-group">
+                                                    <label for="telefoneUsuarioAlt">Telefone</label>
+                                                    <div class="input-group">
+                                                        <div class="form-line">
+                                                            <input type="text" id="telefoneUsuarioAlt"
+                                                                   name="telefoneUsuarioAlt"
+                                                                   class="form-control date"
+                                                                   placeholder="Telefone do Usuário">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
                                     </div>
                                     <!-- #END Tab Pane Alterar Usuário-->
 
