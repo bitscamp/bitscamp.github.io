@@ -3,7 +3,7 @@ const URL = {
     ApiDev: 'http://localhost:9000/'
 };
 
-const Api = URL.ApiProd;
+const Api = URL.ApiDev;
 
 $(".page-access").on('click', function(){
    let recurso = $(this).attr('id');
@@ -16,8 +16,8 @@ function getPage(id) {
         method : 'GET',
         url : Api+id,
         success : function (result) {
-            // location.href = result + ".html";
-            location.href = result;
+            location.href = result + ".html";
+            // location.href = result;
             console.log(result);
         },
         error: function (error) {
