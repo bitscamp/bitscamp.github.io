@@ -2,7 +2,7 @@
 function buscarCategoria(idCategoria){
     $.ajax({
         method : 'GET',
-        url :  URL.BACKEND+'categoriaUsuario/'+idCategoria,
+        url :  Api+'categoriaUsuario/'+idCategoria,
         success : function (result) {
             criarTabelaCategoria(result);
             console.log(result);
@@ -18,7 +18,7 @@ function buscarCategoria(idCategoria){
 function buscarCategoriasAll(){
     $.ajax({
         method : 'GET',
-        url :  URL.BACKEND+'categoriaUsuario',
+        url :  Api+'categoriaUsuario',
         success : function (result) {
             $("#categoriaResult").html('');
             criarTabelaCategorias(result);
@@ -35,7 +35,7 @@ function buscarCategoriasAll(){
 function adicionarCategoria(categoria) {
     $.ajax({
         method : 'POST',
-        url :  URL.BACKEND+'categoriaUsuario',
+        url :  Api+'categoriaUsuario',
         contentType: 'application/json',
         data : categoria,
         success : function (result) {
@@ -54,7 +54,7 @@ function adicionarCategoria(categoria) {
 function alterarCategoria(categoria) {
     $.ajax({
         method : 'POST',
-        url :  URL.BACKEND+'categoriaUsuario',
+        url :  Api+'categoriaUsuario',
         contentType: 'application/json',
         data : categoria,
         success : function (result) {
@@ -73,7 +73,7 @@ function alterarCategoria(categoria) {
 function removerCategoria(idCategoria) {
     $.ajax({
         method : 'DELETE',
-        url :  URL.BACKEND+'categoriaUsuario/'+idCategoria,
+        url :  Api+'categoriaUsuario/'+idCategoria,
         success : function (result) {
             swal("Sucesso :)", "Categoria Removida: "+idCategoria, "success");
             limparCategoriaDel();
@@ -91,7 +91,7 @@ function removerCategoria(idCategoria) {
 function buscarCategoriaAlt(idCategoria) {
     $.ajax({
         method : 'GET',
-        url :  URL.BACKEND+'categoriaUsuario/'+idCategoria,
+        url :  Api+'categoriaUsuario/'+idCategoria,
         success : function (result) {
             preencherCategoriaAlt(result);
             console.log(result);
@@ -107,7 +107,7 @@ function buscarCategoriaAlt(idCategoria) {
 function buscarCategoriaDel(idCategoriaDel){
     $.ajax({
         method : 'GET',
-        url :  URL.BACKEND+'categoriaUsuario/'+idCategoriaDel,
+        url :  Api+'categoriaUsuario/'+idCategoriaDel,
         success : function (result) {
             criarTabelaCategoriaDel(result);
             console.log(result);

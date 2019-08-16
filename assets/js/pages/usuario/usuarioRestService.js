@@ -2,7 +2,7 @@
 function buscarUsuario(idUsuario){
     $.ajax({
         method : 'GET',
-        url :  URL.BACKEND+'usuario/'+idUsuario,
+        url :  Api+'usuario/'+idUsuario,
         success : function (result) {
             criarTabelaUsuario(result);
             console.log(result);
@@ -18,7 +18,7 @@ function buscarUsuario(idUsuario){
 function buscarUsuariosAll(){
     $.ajax({
         method : 'GET',
-        url :  URL.BACKEND+'usuario',
+        url :  Api+'usuario',
         success : function (result) {
             $("#usuarioResult").html('');
             criarTabelaUsuarios(result);
@@ -35,7 +35,7 @@ function buscarUsuariosAll(){
 function adicionarUsuario(usuario) {
     $.ajax({
         method : 'POST',
-        url :  URL.BACKEND+'usuario',
+        url :  Api+'usuario',
         contentType: 'application/json',
         data : usuario,
         success : function (result) {
@@ -54,7 +54,7 @@ function adicionarUsuario(usuario) {
 function alterarUsuario(usuario) {
     $.ajax({
         method : 'POST',
-        url :  URL.BACKEND+'usuario',
+        url :  Api+'usuario',
         contentType: 'application/json',
         data : usuario,
         success : function (result) {
@@ -73,7 +73,7 @@ function alterarUsuario(usuario) {
 function removerUsuario(idUsuario) {
     $.ajax({
         method : 'DELETE',
-        url :  URL.BACKEND+'usuario/'+idUsuario,
+        url :  Api+'usuario/'+idUsuario,
         success : function (result) {
             swal("Sucesso :)", "Usuário Removido: "+idUsuario, "success");
             limparUsuarioDel();
@@ -91,7 +91,7 @@ function removerUsuario(idUsuario) {
 function buscarUsuarioAlt(idUsuario) {
     $.ajax({
         method : 'GET',
-        url :  URL.BACKEND+'usuario/'+idUsuario,
+        url :  Api+'usuario/'+idUsuario,
         success : function (result) {
             preencherUsuarioAlt(result);
             console.log(result);
@@ -107,7 +107,7 @@ function buscarUsuarioAlt(idUsuario) {
 function buscarUsuarioDel(idUsuarioDel){
     $.ajax({
         method : 'GET',
-        url :  URL.BACKEND+'usuario/'+idUsuarioDel,
+        url :  Api+'usuario/'+idUsuarioDel,
         success : function (result) {
             criarTabelaUsuarioDel(result);
             console.log(result);

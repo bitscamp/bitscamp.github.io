@@ -2,7 +2,7 @@
 function buscarPerfil(idPerfil){
     $.ajax({
         method : 'GET',
-        url :  URL.BACKEND+'perfilCliente/'+idPerfil,
+        url :  Api+'perfilCliente/'+idPerfil,
         success : function (result) {
             criarTabelaPerfil(result);
             console.log(result);
@@ -18,7 +18,7 @@ function buscarPerfil(idPerfil){
 function buscarPerfisAll(){
     $.ajax({
         method : 'GET',
-        url :  URL.BACKEND+'perfilCliente',
+        url :  Api+'perfilCliente',
         success : function (result) {
             $("#perfilResult").html('');
             criarTabelaPerfis(result);
@@ -35,7 +35,7 @@ function buscarPerfisAll(){
 function adicionarPerfil(perfil) {
     $.ajax({
         method : 'POST',
-        url :  URL.BACKEND+'perfilCliente',
+        url :  Api+'perfilCliente',
         contentType: 'application/json',
         data : perfil,
         success : function (result) {
@@ -54,7 +54,7 @@ function adicionarPerfil(perfil) {
 function alterarPerfil(perfil) {
     $.ajax({
         method : 'POST',
-        url :  URL.BACKEND+'perfilCliente',
+        url :  Api+'perfilCliente',
         contentType: 'application/json',
         data : perfil,
         success : function (result) {
@@ -73,7 +73,7 @@ function alterarPerfil(perfil) {
 function removerPerfil(idPerfil) {
     $.ajax({
         method : 'DELETE',
-        url :  URL.BACKEND+'perfilCliente/'+idPerfil,
+        url :  Api+'perfilCliente/'+idPerfil,
         success : function (result) {
             swal("Sucesso :)", "Perfil Removida: "+idPerfil, "success");
             limparPerfilDel();
@@ -91,7 +91,7 @@ function removerPerfil(idPerfil) {
 function buscarPerfilAlt(idPerfil) {
     $.ajax({
         method : 'GET',
-        url :  URL.BACKEND+'perfilCliente/'+idPerfil,
+        url :  Api+'perfilCliente/'+idPerfil,
         success : function (result) {
             preencherPerfilAlt(result);
             console.log(result);
@@ -107,7 +107,7 @@ function buscarPerfilAlt(idPerfil) {
 function buscarPerfilDel(idPerfilDel){
     $.ajax({
         method : 'GET',
-        url :  URL.BACKEND+'perfilCliente/'+idPerfilDel,
+        url :  Api+'perfilCliente/'+idPerfilDel,
         success : function (result) {
             criarTabelaPerfilDel(result);
             console.log(result);

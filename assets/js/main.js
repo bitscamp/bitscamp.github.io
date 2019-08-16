@@ -1,6 +1,9 @@
 const URL = {
-    BACKEND: 'https://bitscamp.herokuapp.com/',
+    ApiProd: 'https://bitscamp.herokuapp.com/',
+    ApiDev: 'http://localhost:9000/'
 };
+
+const Api = URL.ApiDev;
 
 $(".page-access").on('click', function(){
    let recurso = $(this).attr('id');
@@ -11,9 +14,10 @@ function getPage(id) {
     let url = window.location.origin;
     $.ajax({
         method : 'GET',
-        url : URL.BACKEND+id,
+        url : URL.ApiDev+id,
         success : function (result) {
-            location.href = result;
+            location.href = result + ".html";
+            // location.href = result;
             console.log(result);
         },
         error: function (error) {
