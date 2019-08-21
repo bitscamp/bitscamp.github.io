@@ -93,11 +93,6 @@ function criarTabelaCategoriaDel(categoria) {
     });
 }
 
-// Preencher Formulário de Alteração de Usuário
-function preencherCategoriaAlt(categoria) {
-    $("#nomeCategoriaAlt").val(categoria.categoria);
-}
-
 // Limpeza de formulários
 function limparCategoriaAdd() {
     $("#nomeCategoriaAdd").val('');
@@ -112,3 +107,10 @@ function limparCategoriaAlt() {
     $("#idCategoriaAlt").val('');
     $("#nomeCategoriaAlt").html('');
 }
+
+// Preencher Formulário de Alteração de Usuário
+function preencherCategoriaAlt(categoria) {
+    $("#nomeCategoriaAlt").val(categoria.categoria);
+}
+
+

@@ -1,5 +1,22 @@
-$("#buscarUsuario").on('click', function() {
+$(document).ready(function () {
+    $.ajax({
+        method: 'GET',
+        url: Api+'categoriaUsuario',
+        success: function (result) {
+            result.forEach(function(value){
+                $("#categoriaUsuarioAdd").append(`<option value="${value.id}">${value.categoria}</option>`);
+                $("#categoriaUsuarioAlt").append(`<option value="${value.id}">${value.categoria}</option>`);
+            });
+            // preencherCategoriaAdd(result);
+        },
+        error: function (error) {
+            swal("Erro :(", "Não foi possível as categorias cadastradas", "error");
+            console.log(error);
+        }
+    });
+});
 
+$("#buscarUsuario").on('click', function() {
     let idUsuario = $("#idUsuario").val();
     if (idUsuario != "") {
         $("#usuarioResult").html('');
@@ -8,12 +25,10 @@ $("#buscarUsuario").on('click', function() {
 });
 
 $("#buscarUsuariosAll").on('click', function() {
-
     buscarUsuariosAll();
 });
 
 $("#adicionarUsuario").on('click', function() {
-
     let usuario = {
         nome: $("#nomeUsuarioAdd").val(),
         email: $("#emailUsuarioAdd").val(),
@@ -40,7 +55,6 @@ $("#adicionarUsuario").on('click', function() {
 });
 
 $("#alterarUsuario").on('click', function() {
-
     let usuario = {
         id: $("#idUsuarioAlt").val(),
         nome: $("#nomeUsuarioAlt").val(),

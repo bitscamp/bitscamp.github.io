@@ -107,7 +107,6 @@ function criarTabelaUsuarioDel(usuario) {
 
 // Preencher Formulário de Alteração de Usuário
 function preencherUsuarioAlt(usuario) {
-
     $("#nomeUsuarioAlt").val(usuario.nome);
     $("#emailUsuarioAlt").val(usuario.email);
     $("#estadoUsuarioAlt").val(usuario.estado.id);
@@ -117,12 +116,10 @@ function preencherUsuarioAlt(usuario) {
     $("#cepUsuarioAlt").val(usuario.cep);
     $("#perfilUsuarioAlt").val(usuario.perfil.id);
     $("#telefoneUsuarioAlt").val(usuario.telefone);
-
 }
 
 // Limpeza de formulários
 function limparUsuarioAdd() {
-
     $("#nomeUsuarioAdd").val('');
     $("#emailUsuarioAdd").val('');
     $("#estadoUsuarioAdd").val('');
@@ -140,7 +137,6 @@ function limparUsuarioDel() {
 }
 
 function limparUsuarioAlt() {
-
     $("#idUsuarioAlt").val('');
     $("#nomeUsuarioAlt").val('');
     $("#emailUsuarioAlt").val('');
@@ -151,4 +147,10 @@ function limparUsuarioAlt() {
     $("#cepUsuarioAlt").val('');
     $("#perfilUsuarioAlt").val('');
     $("#telefoneUsuarioAlt").val('');
+}
+
+function preencherCategoriaAdd(categoria) {
+    categoria.forEach(function(value){
+        $("#categoriaUsuarioAdd").append(`<option value="${value.id}">${value.categoria}</option>`);
+    });
 }
