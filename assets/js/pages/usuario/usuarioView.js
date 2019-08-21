@@ -150,22 +150,12 @@ function limparUsuarioAlt() {
 }
 
 function preencherCategoriaAdd(categoria) {
-    var selectCategoriaAdd = $("#categoriaUsuarioAdd");
-    // selectCategoriaAdd.empty();
-
+    $("#categoriaUsuarioAdd").empty();
+    $("#categoriaUsuarioAdd").append(`<option selected="selected">Selecione uma Categoria</option>`);
     $.each(categoria, function (key, value) {
         $("#categoriaUsuarioAdd").append($('<option></option>').attr('value', value.id).text(value.categoria));
         $('#selectCategoriaAdd').selectpicker('refresh');
     })
 
-
-
-    // categoria.forEach(function(value){
-    //     $("#categoriaUsuarioAdd").append("<option value='"+value.id+"'>"+value.categoria+"</option>");
-    //     $($selectCategoriaAdd).append($('<option>', {
-    //         value: value.id,
-    //         text: value.categoria
-    //     }));
-    //     $selectCategoriaAdd.append($("<option>").val(value.id).text(value.categoria));
-    // });
+    $('.selectpicker').selectpicker('refresh');
 }
