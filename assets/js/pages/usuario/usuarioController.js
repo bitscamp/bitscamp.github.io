@@ -1,19 +1,5 @@
 $(document).ready(function () {
-    $.ajax({
-        method: 'GET',
-        url: Api+'categoriaUsuario',
-        success: function (result) {
-            result.forEach(function(value){
-                $("#categoriaUsuarioAdd").append(`<option value="${value.id}">${value.categoria}</option>`);
-                $("#categoriaUsuarioAlt").append(`<option value="${value.id}">${value.categoria}</option>`);
-            });
-            // preencherCategoriaAdd(result);
-        },
-        error: function (error) {
-            swal("Erro :(", "Não foi possível as categorias cadastradas", "error");
-            console.log(error);
-        }
-    });
+    buscarCategoriaUsuario();
 });
 
 $("#buscarUsuario").on('click', function() {
