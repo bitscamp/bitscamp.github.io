@@ -124,13 +124,8 @@ function buscarCategoriaUsuario() {
         method : 'GET',
         url :  Api+'categoriaUsuario',
         success : function (result) {
+            preencherCategoriaAdd(result)
             console.log(result);
-            // result.forEach(function(value) {
-            //     $("#nomeUsuarioAdd").val('Xablau');
-            //     // $("#categoriaUsuarioAdd").append(`<option value="${value.id}">${value.categoria}</option>`);
-            //     // $("#categoriaUsuarioAlt").append(`<option value="${value.id}">${value.categoria}</option>`);
-            //     console.log(result);
-            // });
         },
         error: function (error) {
             swal("Erro :(", "Não foi possível buscar as categorias: ", "warning");

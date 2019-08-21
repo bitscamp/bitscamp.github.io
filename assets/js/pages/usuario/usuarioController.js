@@ -1,6 +1,8 @@
-$(document).ready(function () {
+$(document).ready(init);
+
+function init() {
     buscarCategoriaUsuario();
-});
+};
 
 $("#buscarUsuario").on('click', function() {
     let idUsuario = $("#idUsuario").val();

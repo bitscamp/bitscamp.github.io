@@ -123,7 +123,7 @@ function limparUsuarioAdd() {
     $("#nomeUsuarioAdd").val('');
     $("#emailUsuarioAdd").val('');
     $("#estadoUsuarioAdd").val('');
-    $("#categoriaUsuarioAdd").val('');
+    // $("#categoriaUsuarioAdd").val('');
     $("#municipioUsuarioAdd").val('');
     $("#enderecoUsuarioAdd").val('');
     $("#cepUsuarioAdd").val('');
@@ -150,7 +150,22 @@ function limparUsuarioAlt() {
 }
 
 function preencherCategoriaAdd(categoria) {
-    categoria.forEach(function(value){
-        $("#categoriaUsuarioAdd").append(`<option value="${value.id}">${value.categoria}</option>`);
-    });
+    var selectCategoriaAdd = $("#categoriaUsuarioAdd");
+    // selectCategoriaAdd.empty();
+
+    $.each(categoria, function (key, value) {
+        $("#categoriaUsuarioAdd").append($('<option></option>').attr('value', value.id).text(value.categoria));
+        $('#selectCategoriaAdd').selectpicker('refresh');
+    })
+
+
+
+    // categoria.forEach(function(value){
+    //     $("#categoriaUsuarioAdd").append("<option value='"+value.id+"'>"+value.categoria+"</option>");
+    //     $($selectCategoriaAdd).append($('<option>', {
+    //         value: value.id,
+    //         text: value.categoria
+    //     }));
+    //     $selectCategoriaAdd.append($("<option>").val(value.id).text(value.categoria));
+    // });
 }
