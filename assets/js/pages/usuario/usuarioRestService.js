@@ -124,7 +124,7 @@ function buscarCategoriaUsuario() {
         method : 'GET',
         url :  Api+'categoriaUsuario',
         success : function (result) {
-            preencherCategoriaAdd(result)
+            preencherCategoriaUsuarioAdd(result)
             console.log(result);
         },
         error: function (error) {
@@ -139,7 +139,22 @@ function buscarPerfilUsuario() {
         method : 'GET',
         url :  Api+'perfilCliente',
         success : function (result) {
-            preencherPerfilAdd(result)
+            preencherPerfilUsuarioAdd(result)
+            console.log(result);
+        },
+        error: function (error) {
+            swal("Erro :(", "Não foi possível buscar as categorias: ", "warning");
+            console.log(error);
+        }
+    });
+}
+
+function buscarEstadoUsuario() {
+    $.ajax({
+        method : 'GET',
+        url :  Api+'estado',
+        success : function (result) {
+            preencherEstadoUsuarioAdd(result)
             console.log(result);
         },
         error: function (error) {

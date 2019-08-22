@@ -3,6 +3,7 @@ $(document).ready(init);
 function init() {
     buscarCategoriaUsuario();
     buscarPerfilUsuario();
+    buscarEstadoUsuario();
 };
 
 $("#buscarUsuario").on('click', function() {

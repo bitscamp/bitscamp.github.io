@@ -149,19 +149,30 @@ function limparUsuarioAlt() {
     $("#telefoneUsuarioAlt").val('');
 }
 
-function preencherCategoriaAdd(categoria) {
+function preencherCategoriaUsuarioAdd(categoria) {
     $("#categoriaUsuarioAdd").empty();
     $("#categoriaUsuarioAdd").append(`<option selected="selected">Selecione uma Categoria</option>`);
     $.each(categoria, function (key, value) {
         $("#categoriaUsuarioAdd").append($('<option></option>').attr('value', value.id).text(value.categoria));
-        $('#selectCategoriaAdd').selectpicker('refresh');
-    })
+    });
 
-    $('.selectpicker').selectpicker('refresh');
+    $('#categoriaUsuarioAdd').selectpicker('refresh');
 }
 
-function preencherPerfilAdd(perfil) {
+function preencherPerfilUsuarioAdd(perfil) {
     $("#perfilUsuarioAdd").empty();
-    $("#perfilUsuarioAdd").append();
+    $("#perfilUsuarioAdd").append(`<option selected="selected">Selecione um Perfil</option>`);
+    $.each(perfil, function (key, value) {
+        $("#perfilUsuarioAdd").append($('<option></option>').attr('value', value.id).text(value.perfilCliente))
+    });
+    $('#perfilUsuarioAdd').selectpicker('refresh');
+}
 
+function preencherEstadoUsuarioAdd(perfil) {
+    $("#estadoUsuarioAdd").empty();
+    $("#estadoUsuarioAdd").append(`<option selected="selected">Selecione um Estado</option>`);
+    $.each(perfil, function (key, value) {
+        $("#estadoUsuarioAdd").append($('<option></option>').attr('value', value.id).text(value.estado))
+    });
+    $('#estadoUsuarioAdd').selectpicker('refresh');
 }
