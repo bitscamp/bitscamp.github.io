@@ -159,3 +159,9 @@ function preencherCategoriaAdd(categoria) {
 
     $('.selectpicker').selectpicker('refresh');
 }
+
+function preencherPerfilAdd(perfil) {
+    $("#perfilUsuarioAdd").empty();
+    $("#perfilUsuarioAdd").append();
+
+}

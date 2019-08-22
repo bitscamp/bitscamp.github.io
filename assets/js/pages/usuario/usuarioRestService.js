@@ -133,3 +133,18 @@ function buscarCategoriaUsuario() {
         }
     });
 }
+
+function buscarPerfilUsuario() {
+    $.ajax({
+        method : 'GET',
+        url :  Api+'perfilCliente',
+        success : function (result) {
+            preencherPerfilAdd(result)
+            console.log(result);
+        },
+        error: function (error) {
+            swal("Erro :(", "Não foi possível buscar as categorias: ", "warning");
+            console.log(error);
+        }
+    });
+}

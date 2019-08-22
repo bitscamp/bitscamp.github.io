@@ -2,6 +2,7 @@ $(document).ready(init);
 
 function init() {
     buscarCategoriaUsuario();
+    buscarPerfilUsuario();
 };
 
 $("#buscarUsuario").on('click', function() {
