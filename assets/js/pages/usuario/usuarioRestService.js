@@ -119,13 +119,12 @@ function buscarUsuarioDel(idUsuarioDel){
     });
 }
 
-function buscarCategoriaUsuario() {
+function preencherCategoriasUsuario(result) {
     $.ajax({
         method : 'GET',
         url :  Api+'categoriaUsuario',
-        success : function (result) {
-            preencherCategoriaUsuarioAdd(result)
-            console.log(result);
+        success : function (data) {
+            result(data);
         },
         error: function (error) {
             swal("Erro :(", "Não foi possível buscar as categorias: ", "warning");
@@ -134,13 +133,12 @@ function buscarCategoriaUsuario() {
     });
 }
 
-function buscarPerfilUsuario() {
-    $.ajax({
+function preencherPerfisUsuario(result) {
+    return $.ajax({
         method : 'GET',
         url :  Api+'perfilCliente',
-        success : function (result) {
-            preencherPerfilUsuarioAdd(result)
-            console.log(result);
+        success : function (data) {
+            result(data);
         },
         error: function (error) {
             swal("Erro :(", "Não foi possível buscar as categorias: ", "warning");
@@ -149,13 +147,12 @@ function buscarPerfilUsuario() {
     });
 }
 
-function buscarEstadoUsuario() {
+function preencherEstadosUsuario(result) {
     $.ajax({
         method : 'GET',
         url :  Api+'estado',
-        success : function (result) {
-            preencherEstadoUsuarioAdd(result)
-            console.log(result);
+        success : function (data) {
+            result(data);
         },
         error: function (error) {
             swal("Erro :(", "Não foi possível buscar as categorias: ", "warning");

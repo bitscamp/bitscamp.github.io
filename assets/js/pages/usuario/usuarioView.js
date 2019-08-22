@@ -149,7 +149,7 @@ function limparUsuarioAlt() {
     $("#telefoneUsuarioAlt").val('');
 }
 
-function preencherCategoriaUsuarioAdd(categoria) {
+function preencherCategoriaUsuarioAddView(categoria) {
     $("#categoriaUsuarioAdd").empty();
     $("#categoriaUsuarioAdd").append(`<option selected="selected">Selecione uma Categoria</option>`);
     $.each(categoria, function (key, value) {
@@ -159,7 +159,7 @@ function preencherCategoriaUsuarioAdd(categoria) {
     $('#categoriaUsuarioAdd').selectpicker('refresh');
 }
 
-function preencherPerfilUsuarioAdd(perfil) {
+function preencherPerfilUsuarioAddView(perfil) {
     $("#perfilUsuarioAdd").empty();
     $("#perfilUsuarioAdd").append(`<option selected="selected">Selecione um Perfil</option>`);
     $.each(perfil, function (key, value) {
@@ -168,7 +168,7 @@ function preencherPerfilUsuarioAdd(perfil) {
     $('#perfilUsuarioAdd').selectpicker('refresh');
 }
 
-function preencherEstadoUsuarioAdd(perfil) {
+function preencherEstadoUsuarioAddView(perfil) {
     $("#estadoUsuarioAdd").empty();
     $("#estadoUsuarioAdd").append(`<option selected="selected">Selecione um Estado</option>`);
     $.each(perfil, function (key, value) {

@@ -1,9 +1,20 @@
 $(document).ready(init);
 
 function init() {
-    buscarCategoriaUsuario();
-    buscarPerfilUsuario();
-    buscarEstadoUsuario();
+
+    preencherCategoriasUsuario(function (result) {
+        preencherCategoriaUsuarioAddView(result);
+    });
+    preencherPerfisUsuario(function (result) {
+        preencherPerfilUsuarioAddView(result);
+    });
+    preencherEstadosUsuario(function (result) {
+        preencherEstadoUsuarioAddView(result);
+    });
+
+    // preencherCategoriaUsuarioAlt();
+    // preencherPerfilUsuarioAlt();
+    // preencherEstadoUsuarioAlt();
 };
 
 $("#buscarUsuario").on('click', function() {
