@@ -3,18 +3,15 @@ $(document).ready(init);
 function init() {
 
     preencherCategoriasUsuario(function (result) {
-        preencherCategoriaUsuarioAddView(result);
+        preencherCategoriaUsuarioView(result);
     });
     preencherPerfisUsuario(function (result) {
-        preencherPerfilUsuarioAddView(result);
+        preencherPerfilUsuarioView(result);
     });
     preencherEstadosUsuario(function (result) {
-        preencherEstadoUsuarioAddView(result);
+        preencherEstadoUsuarioView(result);
     });
 
-    // preencherCategoriaUsuarioAlt();
-    // preencherPerfilUsuarioAlt();
-    // preencherEstadoUsuarioAlt();
 };
 
 $("#buscarUsuario").on('click', function() {
@@ -34,16 +31,16 @@ $("#adicionarUsuario").on('click', function() {
         nome: $("#nomeUsuarioAdd").val(),
         email: $("#emailUsuarioAdd").val(),
         categoria: {
-            id: $("#categoriaUsuarioAdd").val()
+            id: $("#categoriaUsuarioAdd option:selected").val()
         },
         municipio: $("#municipioUsuarioAdd").val(),
         estado: {
-            id: $("#estadoUsuarioAdd").val()
+            id: $("#estadoUsuarioAdd option:selected").val()
         },
         endereco: $("#enderecoUsuarioAdd").val(),
         cep: $("#cepUsuarioAdd").val(),
         perfil: {
-            id: $("#perfilUsuarioAdd").val()
+            id: $("#perfilUsuarioAdd option:selected").val()
         },
         telefone: $("#telefoneUsuarioAdd").val()
     };
@@ -102,7 +99,6 @@ $("#buscarUsuarioAlt").on('click', function() {
     let idUsuarioAlt = $("#idUsuarioAlt").val();
     if (idUsuarioAlt != ""){
         buscarUsuarioAlt(idUsuarioAlt);
-        // $("#idUsuarioAlt").html('');
     }
 
 });

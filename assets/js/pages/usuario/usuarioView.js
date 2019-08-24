@@ -2,7 +2,7 @@
 function criarTabelaUsuarios(usuario) {
     let table = `
     <div class="col-md-12">
-        <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" id="tabelaUsuario" width="100%">
+        <table class="table table-striped table-bordered" id="tabelaUsuario">
             <thead>
                 <tr>
                     <th>CÓDIGO</th>
@@ -41,7 +41,7 @@ function criarTabelaUsuarios(usuario) {
 function criarTabelaUsuario(usuario) {
     let table = `
     <div class="col-md-12">
-        <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" id="tabelaUsuario" width="100%">
+        <table class="table table-striped table-bordered" id="tabelaUsuario">
             <thead>
                 <tr>
                     <th>CÓDIGO</th>
@@ -76,7 +76,7 @@ function criarTabelaUsuario(usuario) {
 function criarTabelaUsuarioDel(usuario) {
     let table = `
     <div class="col-md-12">
-        <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" id="tabelaUsuario" width="100%">
+        <table class="table table-striped table-bordered" id="tabelaUsuario">
             <thead>
                 <tr>
                     <th>CÓDIGO</th>
@@ -116,6 +116,11 @@ function preencherUsuarioAlt(usuario) {
     $("#cepUsuarioAlt").val(usuario.cep);
     $("#perfilUsuarioAlt").val(usuario.perfil.id);
     $("#telefoneUsuarioAlt").val(usuario.telefone);
+
+    $('#estadoUsuarioAlt').selectpicker('refresh');
+    $('#categoriaUsuarioAlt').selectpicker('refresh');
+    $('#perfilUsuarioAlt').selectpicker('refresh');
+
 }
 
 // Limpeza de formulários
@@ -149,30 +154,53 @@ function limparUsuarioAlt() {
     $("#telefoneUsuarioAlt").val('');
 }
 
-function preencherCategoriaUsuarioAddView(categoria) {
+function preencherCategoriaUsuarioView(categoria) {
     $("#categoriaUsuarioAdd").empty();
     $("#categoriaUsuarioAdd").append(`<option selected="selected">Selecione uma Categoria</option>`);
     $.each(categoria, function (key, value) {
         $("#categoriaUsuarioAdd").append($('<option></option>').attr('value', value.id).text(value.categoria));
     });
 
+    $("#categoriaUsuarioAlt").empty();
+    $("#categoriaUsuarioAlt").append(`<option selected="selected">Selecione uma Categoria</option>`);
+    $.each(categoria, function (key, value) {
+        $("#categoriaUsuarioAlt").append($('<option></option>').attr('value', value.id).text(value.categoria));
+    });
+
     $('#categoriaUsuarioAdd').selectpicker('refresh');
+    $('#categoriaUsuarioAlt').selectpicker('refresh');
 }
 
-function preencherPerfilUsuarioAddView(perfil) {
+function preencherPerfilUsuarioView(perfil) {
     $("#perfilUsuarioAdd").empty();
     $("#perfilUsuarioAdd").append(`<option selected="selected">Selecione um Perfil</option>`);
     $.each(perfil, function (key, value) {
         $("#perfilUsuarioAdd").append($('<option></option>').attr('value', value.id).text(value.perfilCliente))
     });
+
+    $("#perfilUsuarioAlt").empty();
+    $("#perfilUsuarioAlt").append(`<option selected="selected">Selecione um Perfil</option>`);
+    $.each(perfil, function (key, value) {
+        $("#perfilUsuarioAlt").append($('<option></option>').attr('value', value.id).text(value.perfilCliente))
+    });
+
     $('#perfilUsuarioAdd').selectpicker('refresh');
+    $('#perfilUsuarioAlt').selectpicker('refresh');
 }
 
-function preencherEstadoUsuarioAddView(perfil) {
+function preencherEstadoUsuarioView(perfil) {
     $("#estadoUsuarioAdd").empty();
     $("#estadoUsuarioAdd").append(`<option selected="selected">Selecione um Estado</option>`);
     $.each(perfil, function (key, value) {
         $("#estadoUsuarioAdd").append($('<option></option>').attr('value', value.id).text(value.estado))
     });
+
+    $("#estadoUsuarioAlt").empty();
+    $("#estadoUsuarioAlt").append(`<option selected="selected">Selecione um Estado</option>`);
+    $.each(perfil, function (key, value) {
+        $("#estadoUsuarioAlt").append($('<option></option>').attr('value', value.id).text(value.estado))
+    });
+
     $('#estadoUsuarioAdd').selectpicker('refresh');
+    $('#estadoUsuarioAlt').selectpicker('refresh');
 }
