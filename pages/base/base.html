@@ -3,43 +3,45 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <title>EasyBot - BitsCamp</title>
 
     <!-- Favicon-->
-    <link rel="icon" href="../../assets/images/favicon.ico" type="image/x-icon">
+    <link href="../../assets/images/favicon.ico" rel="icon" type="image/x-icon">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet"
+          type="text/css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
 
     <!-- Bootstrap Core Css -->
     <link href="../../assets/plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
 
     <!-- Bootstrap Select Css -->
-    <link href="../../assets/plugins/bootstrap-select/css/bootstrap-select.css" rel="stylesheet" />
+    <link href="../../assets/plugins/bootstrap-select/css/bootstrap-select.css" rel="stylesheet"/>
 
     <!-- Waves Effect Css -->
-    <link href="../../assets/plugins/node-waves/waves.css" rel="stylesheet" />
+    <link href="../../assets/plugins/node-waves/waves.css" rel="stylesheet"/>
 
     <!-- Animation Css -->
-    <link href="../../assets/plugins/animate-css/animate.css" rel="stylesheet" />
+    <link href="../../assets/plugins/animate-css/animate.css" rel="stylesheet"/>
 
     <!-- Morris Chart Css-->
-    <link href="../../assets/plugins/morrisjs/morris.css" rel="stylesheet" />
+    <link href="../../assets/plugins/morrisjs/morris.css" rel="stylesheet"/>
 
     <!-- Data Tables Css -->
-    <link href="../../assets/plugins/jquery-datatable/skin/bootstrap/css/dataTables.bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="../../assets/plugins/jquery-datatable/skin/bootstrap/css/dataTables.bootstrap.css" rel="stylesheet"
+          type="text/css"/>
 
     <!-- SweetAlert Plugin CSS -->
-    <link href="../../assets/plugins/sweetalert/sweetalert.css" rel="stylesheet" type="text/css" />
+    <link href="../../assets/plugins/sweetalert/sweetalert.css" rel="stylesheet" type="text/css"/>
 
     <!-- Custom Css -->
     <link href="../../assets/css/style.css" rel="stylesheet">
 
     <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
-    <link href="../../assets/css/themes/all-themes.css" rel="stylesheet" />
+    <link href="../../assets/css/themes/all-themes.css" rel="stylesheet"/>
 
 </head>
 
@@ -72,7 +74,7 @@
     <div class="search-icon">
         <i class="material-icons">search</i>
     </div>
-    <input type="text" placeholder="Começe a Digitar...">
+    <input placeholder="Começe a Digitar..." type="text">
     <div class="close-search">
         <i class="material-icons">close</i>
     </div>
@@ -84,8 +86,9 @@
     <div class="container-fluid">
 
         <div class="navbar-header">
-            <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
-            <a href="javascript:void(0);" class="bars"></a>
+            <a aria-expanded="false" class="navbar-toggle collapsed" data-target="#navbar-collapse"
+               data-toggle="collapse" href="javascript:void(0);"></a>
+            <a class="bars" href="javascript:void(0);"></a>
             <a class="navbar-brand" href="javascript:goHome();">EASYBOT - BITSCAMP</a>
         </div>
 
@@ -94,7 +97,7 @@
 
                 <!-- Call Search -->
                 <li>
-                    <a href="javascript:void(0);" class="js-search" data-close="true">
+                    <a class="js-search" data-close="true" href="javascript:void(0);">
                         <i class="material-icons">search</i>
                     </a>
                 </li>
@@ -109,22 +112,22 @@
 <section>
 
     <!-- Left Sidebar -->
-    <aside id="leftsidebar" class="sidebar">
+    <aside class="sidebar" id="leftsidebar">
 
         <!-- User Info -->
         <div class="user-info">
             <div class="image">
-                <img src="../../assets/images/user.png" width="48" height="48" alt="User" />
+                <img alt="User" height="48" src="../../assets/images/user.png" width="48"/>
             </div>
             <div class="info-container">
-                <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pedro Satore</div>
+                <div aria-expanded="false" aria-haspopup="true" class="name" data-toggle="dropdown">Pedro Satore</div>
                 <div class="email">pedro.satore@bitscamp.com.br</div>
                 <div class="btn-group user-helper-dropdown">
-                    <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">keyboard_arrow_down</i>
+                    <i aria-expanded="true" aria-haspopup="true" class="material-icons" data-toggle="dropdown">keyboard_arrow_down</i>
                     <ul class="dropdown-menu pull-right">
                         <li><a href="javascript:void(0);"><i class="material-icons">person</i>Perfil</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a id="sair" class="page-access"><i class="material-icons">input</i>Sair</a></li>
+                        <li class="divider" role="separator"></li>
+                        <li><a class="page-access" id="sair"><i class="material-icons">input</i>Sair</a></li>
                     </ul>
                 </div>
             </div>
@@ -142,18 +145,18 @@
                     </a>
                 </li>
                 <li>
-                    <a href="javascript:void(0);" class="menu-toggle">
+                    <a class="menu-toggle" href="javascript:void(0);">
                         <i class="material-icons">person</i>
                         <span>Gestão - Usuários</span>
                     </a>
                     <ul class="ml-menu">
                         <li>
-                            <a id="manter_usuario" class="menu-toggle page-access">
+                            <a class="menu-toggle page-access" id="manter_usuario">
                                 <span>Usuários</span>
                             </a>
                         </li>
                         <li>
-                            <a id="manter_categoria" class="menu-toggle page-access">
+                            <a class="menu-toggle page-access" id="manter_categoria">
                                 <span>Categorias</span>
                             </a>
                         </li>
@@ -161,18 +164,18 @@
                 </li>
 
                 <li>
-                    <a href="javascript:void(0);" class="menu-toggle">
+                    <a class="menu-toggle" href="javascript:void(0);">
                         <i class="material-icons">people</i>
                         <span>Gestão - Clientes</span>
                     </a>
                     <ul class="ml-menu">
                         <li>
-                            <a id="manter_cliente" class="menu-toggle page-access">
+                            <a class="menu-toggle page-access" id="manter_cliente">
                                 <span>Clientes</span>
                             </a>
                         </li>
                         <li>
-                            <a id="manter_perfil" class="menu-toggle page-access">
+                            <a class="menu-toggle page-access" id="manter_perfil">
                                 <span>Perfis</span>
                             </a>
                         </li>
@@ -180,13 +183,13 @@
                 </li>
 
                 <li>
-                    <a href="javascript:void(0);" class="menu-toggle">
+                    <a class="menu-toggle" href="javascript:void(0);">
                         <i class="material-icons">store</i>
                         <span>Gestão - Lojas</span>
                     </a>
                     <ul class="ml-menu">
                         <li>
-                            <a id="manter_loja" class="menu-toggle page-access">
+                            <a class="menu-toggle page-access" id="manter_loja">
                                 <span>Lojas Parceiras</span>
                             </a>
                         </li>

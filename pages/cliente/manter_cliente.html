@@ -3,12 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <title>EasyBot - BitsCamp</title>
 
     <!-- Favicon-->
-    <link rel="icon" href="../../assets/images/favicon.ico" type="image/x-icon">
+    <link href="../../assets/images/favicon.ico" rel="icon" type="image/x-icon">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet"
@@ -74,7 +74,7 @@
     <div class="search-icon">
         <i class="material-icons">search</i>
     </div>
-    <input type="text" placeholder="Começe a Digitar...">
+    <input placeholder="Começe a Digitar..." type="text">
     <div class="close-search">
         <i class="material-icons">close</i>
     </div>
@@ -86,9 +86,9 @@
     <div class="container-fluid">
 
         <div class="navbar-header">
-            <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse"
-               data-target="#navbar-collapse" aria-expanded="false"></a>
-            <a href="javascript:void(0);" class="bars"></a>
+            <a aria-expanded="false" class="navbar-toggle collapsed" data-target="#navbar-collapse"
+               data-toggle="collapse" href="javascript:void(0);"></a>
+            <a class="bars" href="javascript:void(0);"></a>
             <a class="navbar-brand" href="javascript:goHome();">EASYBOT - BITSCAMP</a>
         </div>
 
@@ -97,7 +97,7 @@
 
                 <!-- Call Search -->
                 <li>
-                    <a href="javascript:void(0);" class="js-search" data-close="true">
+                    <a class="js-search" data-close="true" href="javascript:void(0);">
                         <i class="material-icons">search</i>
                     </a>
                 </li>
@@ -112,22 +112,22 @@
 <section>
 
     <!-- Left Sidebar -->
-    <aside id="leftsidebar" class="sidebar">
+    <aside class="sidebar" id="leftsidebar">
 
         <!-- User Info -->
         <div class="user-info">
             <div class="image">
-                <img src="../../assets/images/user.png" width="48" height="48" alt="User"/>
+                <img alt="User" height="48" src="../../assets/images/user.png" width="48"/>
             </div>
             <div class="info-container">
-                <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pedro Satore</div>
+                <div aria-expanded="false" aria-haspopup="true" class="name" data-toggle="dropdown">Pedro Satore</div>
                 <div class="email">pedro.satore@bitscamp.com.br</div>
                 <div class="btn-group user-helper-dropdown">
-                    <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">keyboard_arrow_down</i>
+                    <i aria-expanded="true" aria-haspopup="true" class="material-icons" data-toggle="dropdown">keyboard_arrow_down</i>
                     <ul class="dropdown-menu pull-right">
                         <li><a href="javascript:void(0);"><i class="material-icons">person</i>Perfil</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a id="sair" class="page-access"><i class="material-icons">input</i>Sair</a></li>
+                        <li class="divider" role="separator"></li>
+                        <li><a class="page-access" id="sair"><i class="material-icons">input</i>Sair</a></li>
                     </ul>
                 </div>
             </div>
@@ -145,18 +145,18 @@
                     </a>
                 </li>
                 <li>
-                    <a href="javascript:void(0);" class="menu-toggle">
+                    <a class="menu-toggle" href="javascript:void(0);">
                         <i class="material-icons">person</i>
                         <span>Gestão - Usuários</span>
                     </a>
                     <ul class="ml-menu">
                         <li>
-                            <a id="manter_usuario" class="menu-toggle page-access">
+                            <a class="menu-toggle page-access" id="manter_usuario">
                                 <span>Usuários</span>
                             </a>
                         </li>
                         <li>
-                            <a id="manter_categoria" class="menu-toggle page-access">
+                            <a class="menu-toggle page-access" id="manter_categoria">
                                 <span>Categorias</span>
                             </a>
                         </li>
@@ -164,18 +164,18 @@
                 </li>
 
                 <li>
-                    <a href="javascript:void(0);" class="menu-toggle">
+                    <a class="menu-toggle" href="javascript:void(0);">
                         <i class="material-icons">people</i>
                         <span>Gestão - Clientes</span>
                     </a>
                     <ul class="ml-menu">
                         <li>
-                            <a id="manter_cliente" class="menu-toggle page-access">
+                            <a class="menu-toggle page-access" id="manter_cliente">
                                 <span>Clientes</span>
                             </a>
                         </li>
                         <li>
-                            <a id="manter_perfil" class="menu-toggle page-access">
+                            <a class="menu-toggle page-access" id="manter_perfil">
                                 <span>Perfis</span>
                             </a>
                         </li>
@@ -183,13 +183,13 @@
                 </li>
 
                 <li>
-                    <a href="javascript:void(0);" class="menu-toggle">
+                    <a class="menu-toggle" href="javascript:void(0);">
                         <i class="material-icons">store</i>
                         <span>Gestão - Lojas</span>
                     </a>
                     <ul class="ml-menu">
                         <li>
-                            <a id="manter_loja" class="menu-toggle page-access">
+                            <a class="menu-toggle page-access" id="manter_loja">
                                 <span>Lojas Parceiras</span>
                             </a>
                         </li>
@@ -232,23 +232,23 @@
                     <div class="body">
                         <!-- Nav tabs -->
                         <ul class="nav nav-tabs" role="tablist">
-                            <li role="presentation" class="active">
-                                <a href="#encontrar" data-toggle="tab">
+                            <li class="active" role="presentation">
+                                <a data-toggle="tab" href="#encontrar">
                                     <i class="material-icons">search</i> ENCONTRAR
                                 </a>
                             </li>
                             <li role="presentation">
-                                <a href="#cadastrar" data-toggle="tab">
+                                <a data-toggle="tab" href="#cadastrar">
                                     <i class="material-icons">person_add</i> CADASTRAR
                                 </a>
                             </li>
                             <li role="presentation">
-                                <a href="#alterar" data-toggle="tab">
+                                <a data-toggle="tab" href="#alterar">
                                     <i class="material-icons">settings</i> ALTERAR
                                 </a>
                             </li>
                             <li role="presentation">
-                                <a href="#remover" data-toggle="tab">
+                                <a data-toggle="tab" href="#remover">
                                     <i class="material-icons">delete</i> REMOVER
                                 </a>
                             </li>
@@ -258,7 +258,7 @@
                         <div class="tab-content">
 
                             <!-- Tab Pane Encontrar Usuário-->
-                            <div role="tabpanel" class="tab-pane fade in active" id="encontrar">
+                            <div class="tab-pane fade in active" id="encontrar" role="tabpanel">
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="col-md-3">
@@ -266,12 +266,12 @@
                                                 <label for="idUsuario">Código</label>
                                                 <div class="input-group">
                                                     <div class="form-line focused">
-                                                        <input type="text" id="idUsuario" name="idUsuario"
-                                                               class="form-control"
-                                                               placeholder="Código do Usuário">
+                                                        <input class="form-control" id="idUsuario" name="idUsuario"
+                                                               placeholder="Código do Usuário"
+                                                               type="text">
                                                     </div>
                                                     <span class="input-group-addon">
-                                                        <a id="buscarUsuario" href="javascript:void(0);">
+                                                        <a href="javascript:void(0);" id="buscarUsuario">
                                                             <i class="material-icons">search</i>
                                                         </a>
                                                     </span>
@@ -281,8 +281,8 @@
 
                                         <div class="col-md-9">
                                             <div class="box-col-group">
-                                                <button type="button" class="btn bg-indigo waves-effect pull-right"
-                                                        id="buscarUsuariosAll">
+                                                <button class="btn bg-indigo waves-effect pull-right" id="buscarUsuariosAll"
+                                                        type="button">
                                                     <i class="material-icons">search</i>
                                                     <span>Buscar Tudo</span>
                                                 </button>
@@ -300,23 +300,24 @@
                             <!-- #END Tab Pane Encontrar Usuário-->
 
                             <!-- Tab Pane Cadastrar Usuário-->
-                            <div role="tabpanel" class="tab-pane fade" id="cadastrar">
+                            <div class="tab-pane fade" id="cadastrar" role="tabpanel">
 
                                 <div class="row">
 
                                     <div class="col-md-3">
                                         <div class="box-col-group">
                                             <label for="categoriaUsuarioAdd">Categoria</label>
-                                            <select name="categoriaUsuarioAdd" id="categoriaUsuarioAdd" class="form-control">
+                                            <select class="form-control" id="categoriaUsuarioAdd"
+                                                    name="categoriaUsuarioAdd">
                                             </select>
                                         </div>
                                     </div>
 
                                     <div class="col-md-9">
                                         <div class="box-col-group">
-                                            <button type="button"
-                                                    class="btn bg-green btn-circle-lg waves-effect waves-circle waves-float pull-right m-r-10"
-                                                    id="adicionarUsuario">
+                                            <button class="btn bg-green btn-circle-lg waves-effect waves-circle waves-float pull-right m-r-10"
+                                                    id="adicionarUsuario"
+                                                    type="button">
                                                 <i class="material-icons">save</i>
                                             </button>
                                         </div>
@@ -329,9 +330,9 @@
                                             <label for="nomeUsuarioAdd">Nome</label>
                                             <div class="input-group">
                                                 <div class="form-line focused">
-                                                    <input type="text" id="nomeUsuarioAdd"
-                                                           name="nomeUsuarioAdd" class="form-control"
-                                                           placeholder="Nome do Usuário">
+                                                    <input class="form-control" id="nomeUsuarioAdd"
+                                                           name="nomeUsuarioAdd" placeholder="Nome do Usuário"
+                                                           type="text">
                                                 </div>
                                             </div>
                                         </div>
@@ -342,9 +343,9 @@
                                             <label for="emailUsuarioAdd">E-mail</label>
                                             <div class="input-group">
                                                 <div class="form-line focused">
-                                                    <input type="text" id="emailUsuarioAdd"
-                                                           name="emailUsuarioAdd" class="form-control"
-                                                           placeholder="E-mail do Usuário">
+                                                    <input class="form-control" id="emailUsuarioAdd"
+                                                           name="emailUsuarioAdd" placeholder="E-mail do Usuário"
+                                                           type="text">
                                                 </div>
                                             </div>
                                         </div>
@@ -353,7 +354,7 @@
                                     <div class="col-md-3">
                                         <div class="box-col-group">
                                             <label for="perfilUsuarioAdd">Perfil</label>
-                                            <select id="perfilUsuarioAdd" class="form-control">
+                                            <select class="form-control" id="perfilUsuarioAdd">
                                             </select>
                                         </div>
                                     </div>
@@ -361,7 +362,7 @@
                                     <div class="col-md-3">
                                         <div class="box-col-group">
                                             <label for="estadoUsuarioAdd">Estado</label>
-                                            <select id="estadoUsuarioAdd" class="form-control">
+                                            <select class="form-control" id="estadoUsuarioAdd">
                                             </select>
                                         </div>
                                     </div>
@@ -373,10 +374,10 @@
                                             <label for="municipioUsuarioAdd">Municipio</label>
                                             <div class="input-group">
                                                 <div class="form-line">
-                                                    <input type="text" id="municipioUsuarioAdd"
+                                                    <input class="form-control" id="municipioUsuarioAdd"
                                                            name="municipioUsuarioAdd"
-                                                           class="form-control"
-                                                           placeholder="Município do Usuário">
+                                                           placeholder="Município do Usuário"
+                                                           type="text">
                                                 </div>
                                             </div>
                                         </div>
@@ -387,10 +388,10 @@
                                             <label for="enderecoUsuarioAdd">Endereço</label>
                                             <div class="input-group">
                                                 <div class="form-line">
-                                                    <input type="text" id="enderecoUsuarioAdd"
+                                                    <input class="form-control" id="enderecoUsuarioAdd"
                                                            name="enderecoUsuarioAdd"
-                                                           class="form-control"
-                                                           placeholder="Endereço do Usuário">
+                                                           placeholder="Endereço do Usuário"
+                                                           type="text">
                                                 </div>
                                             </div>
                                         </div>
@@ -401,9 +402,9 @@
                                             <label for="cepUsuarioAdd">CEP</label>
                                             <div class="input-group">
                                                 <div class="form-line">
-                                                    <input type="text" id="cepUsuarioAdd"
-                                                           name="cepUsuarioAdd" class="form-control"
-                                                           placeholder="CEP do Usuário">
+                                                    <input class="form-control" id="cepUsuarioAdd"
+                                                           name="cepUsuarioAdd" placeholder="CEP do Usuário"
+                                                           type="text">
                                                 </div>
                                             </div>
                                         </div>
@@ -414,10 +415,10 @@
                                             <label for="telefoneUsuarioAdd">Telefone</label>
                                             <div class="input-group">
                                                 <div class="form-line">
-                                                    <input type="text" id="telefoneUsuarioAdd"
+                                                    <input class="form-control" id="telefoneUsuarioAdd"
                                                            name="telefoneUsuarioAdd"
-                                                           class="form-control"
-                                                           placeholder="Telefone do Usuário">
+                                                           placeholder="Telefone do Usuário"
+                                                           type="text">
                                                 </div>
                                             </div>
                                         </div>
@@ -428,31 +429,31 @@
                             <!-- #END Tab Pane Cadastrar Usuário-->
 
                             <!-- Tab Pane Alterar Usuário-->
-                            <div role="tabpanel" class="tab-pane fade" id="alterar">
+                            <div class="tab-pane fade" id="alterar" role="tabpanel">
                                 <div class="row">
                                     <div class="col-md-3">
                                         <div class="box-col-group">
                                             <label for="idUsuarioAlt">Código</label>
                                             <div class="input-group">
                                                 <div class="form-line focused">
-                                                    <input type="text" id="idUsuarioAlt" name="idUsuarioAlt"
-                                                           class="form-control"
-                                                           placeholder="Código do Usuário">
+                                                    <input class="form-control" id="idUsuarioAlt" name="idUsuarioAlt"
+                                                           placeholder="Código do Usuário"
+                                                           type="text">
                                                 </div>
                                                 <span class="input-group-addon">
-                                                                <a id="buscarUsuarioAlt" href="javascript:void(0);">
-                                                                    <i class="material-icons">search</i>
-                                                                </a>
-                                                            </span>
+                                                    <a href="javascript:void(0);" id="buscarUsuarioAlt">
+                                                        <i class="material-icons">search</i>
+                                                    </a>
+                                                </span>
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class="col-md-9">
                                         <div class="box-col-group">
-                                            <button type="button"
-                                                    class="btn bg-green btn-circle-lg waves-effect waves-circle waves-float pull-right m-r-10"
-                                                    id="alterarUsuario">
+                                            <button class="btn bg-green btn-circle-lg waves-effect waves-circle waves-float pull-right m-r-10"
+                                                    id="alterarUsuario"
+                                                    type="button">
                                                 <i class="material-icons">save</i>
                                             </button>
                                         </div>
@@ -465,9 +466,9 @@
                                             <label for="nomeUsuarioAlt">Nome</label>
                                             <div class="input-group">
                                                 <div class="form-line focused">
-                                                    <input type="text" id="nomeUsuarioAlt"
-                                                           name="nomeUsuarioAlt" class="form-control"
-                                                           placeholder="Nome do Usuário">
+                                                    <input class="form-control" id="nomeUsuarioAlt"
+                                                           name="nomeUsuarioAlt" placeholder="Nome do Usuário"
+                                                           type="text">
                                                 </div>
                                             </div>
                                         </div>
@@ -478,9 +479,9 @@
                                             <label for="emailUsuarioAlt">E-mail</label>
                                             <div class="input-group">
                                                 <div class="form-line focused">
-                                                    <input type="text" id="emailUsuarioAlt"
-                                                           name="emailUsuarioAlt" class="form-control"
-                                                           placeholder="E-mail do Usuário">
+                                                    <input class="form-control" id="emailUsuarioAlt"
+                                                           name="emailUsuarioAlt" placeholder="E-mail do Usuário"
+                                                           type="text">
                                                 </div>
                                             </div>
                                         </div>
@@ -489,7 +490,7 @@
                                     <div class="col-md-3">
                                         <div class="box-col-group">
                                             <label for="categoriaUsuarioAlt">Categoria</label>
-                                            <select id="categoriaUsuarioAlt" class="form-control">
+                                            <select class="form-control" id="categoriaUsuarioAlt">
                                             </select>
                                         </div>
                                     </div>
@@ -497,7 +498,7 @@
                                     <div class="col-md-3">
                                         <div class="box-col-group">
                                             <label for="perfilUsuarioAlt">Perfil</label>
-                                            <select id="perfilUsuarioAlt" class="form-control">
+                                            <select class="form-control" id="perfilUsuarioAlt">
                                             </select>
                                         </div>
                                     </div>
@@ -508,7 +509,7 @@
                                     <div class="col-md-3">
                                         <div class="box-col-group">
                                             <label for="estadoUsuarioAlt">Estado</label>
-                                            <select id="estadoUsuarioAlt" class="form-control">
+                                            <select class="form-control" id="estadoUsuarioAlt">
                                             </select>
                                         </div>
                                     </div>
@@ -518,10 +519,10 @@
                                             <label for="municipioUsuarioAlt">Municipio</label>
                                             <div class="input-group">
                                                 <div class="form-line">
-                                                    <input type="text" id="municipioUsuarioAlt"
+                                                    <input class="form-control" id="municipioUsuarioAlt"
                                                            name="municipioUsuarioAlt"
-                                                           class="form-control"
-                                                           placeholder="Município do Usuário">
+                                                           placeholder="Município do Usuário"
+                                                           type="text">
                                                 </div>
                                             </div>
                                         </div>
@@ -532,10 +533,10 @@
                                             <label for="enderecoUsuarioAlt">Endereço</label>
                                             <div class="input-group">
                                                 <div class="form-line">
-                                                    <input type="text" id="enderecoUsuarioAlt"
+                                                    <input class="form-control" id="enderecoUsuarioAlt"
                                                            name="enderecoUsuarioAlt"
-                                                           class="form-control"
-                                                           placeholder="Endereço do Usuário">
+                                                           placeholder="Endereço do Usuário"
+                                                           type="text">
                                                 </div>
                                             </div>
                                         </div>
@@ -546,9 +547,9 @@
                                             <label for="cepUsuarioAlt">CEP</label>
                                             <div class="input-group">
                                                 <div class="form-line">
-                                                    <input type="text" id="cepUsuarioAlt"
-                                                           name="cepUsuarioAlt" class="form-control"
-                                                           placeholder="CEP do Usuário">
+                                                    <input class="form-control" id="cepUsuarioAlt"
+                                                           name="cepUsuarioAlt" placeholder="CEP do Usuário"
+                                                           type="text">
                                                 </div>
                                             </div>
                                         </div>
@@ -561,10 +562,10 @@
                                             <label for="telefoneUsuarioAlt">Telefone</label>
                                             <div class="input-group">
                                                 <div class="form-line">
-                                                    <input type="text" id="telefoneUsuarioAlt"
+                                                    <input class="form-control" id="telefoneUsuarioAlt"
                                                            name="telefoneUsuarioAlt"
-                                                           class="form-control"
-                                                           placeholder="Telefone do Usuário">
+                                                           placeholder="Telefone do Usuário"
+                                                           type="text">
                                                 </div>
                                             </div>
                                         </div>
@@ -574,7 +575,7 @@
                             <!-- #END Tab Pane Alterar Usuário-->
 
                             <!-- Tab Pane Remover Usuário-->
-                            <div role="tabpanel" class="tab-pane fade" id="remover">
+                            <div class="tab-pane fade" id="remover" role="tabpanel">
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="col-md-3">
@@ -582,23 +583,23 @@
                                                 <label for="idUsuarioDel">Código</label>
                                                 <div class="input-group">
                                                     <div class="form-line focused">
-                                                        <input type="text" id="idUsuarioDel" name="idUsuarioDel"
-                                                               class="form-control"
-                                                               placeholder="Código do Usuário">
+                                                        <input class="form-control" id="idUsuarioDel" name="idUsuarioDel"
+                                                               placeholder="Código do Usuário"
+                                                               type="text">
                                                     </div>
                                                     <span class="input-group-addon">
-                                                                <a id="buscarUsuarioDel" href="javascript:void(0);">
-                                                                    <i class="material-icons">search</i>
-                                                                </a>
-                                                            </span>
+                                                        <a href="javascript:void(0);" id="buscarUsuarioDel">
+                                                            <i class="material-icons">search</i>
+                                                        </a>
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-md-9">
                                             <div class="box-col-group">
-                                                <button type="button"
-                                                        class="btn bg-red btn-circle-lg waves-effect waves-circle waves-float pull-right m-r-10"
-                                                        id="removerUsuario">
+                                                <button class="btn bg-red btn-circle-lg waves-effect waves-circle waves-float pull-right m-r-10"
+                                                        id="removerUsuario"
+                                                        type="button">
                                                     <i class="material-icons">delete</i>
                                                 </button>
                                             </div>
