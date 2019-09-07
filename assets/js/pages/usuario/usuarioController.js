@@ -15,10 +15,10 @@ function init() {
 };
 
 $("#buscarUsuario").on('click', function() {
-    let idUsuario = $("#idUsuario").val();
-    if (idUsuario != "") {
+    let cpfUsuario = $("#idUsuario").val();
+    if (cpfUsuario != "") {
         $("#usuarioResult").html('');
-        buscarUsuario(idUsuario);
+        buscarUsuario(cpfUsuario);
     }
 });
 

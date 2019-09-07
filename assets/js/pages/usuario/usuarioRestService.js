@@ -1,8 +1,8 @@
 // Função P/ Buscar Usuário Por Id
-function buscarUsuario(idUsuario){
+function buscarUsuario(cpf){
     $.ajax({
         method : 'GET',
-        url :  Api+'usuario/'+idUsuario,
+        url :  Api+'usuario/'+cpf,
         success : function (result) {
             criarTabelaUsuario(result);
             console.log(result);
