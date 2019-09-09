@@ -14,22 +14,34 @@ function init() {
 
 };
 
-$("#buscarUsuario").on('click', function() {
-    let cpfUsuario = $("#idUsuario").val();
-    if (cpfUsuario != "") {
-        $("#usuarioResult").html('');
-        buscarUsuario(cpfUsuario);
-    }
+$("#buscaUsuariosAll").on('click', function() {
+    $("#emailUsuarioTab").val(null);
+    buscaUsuarioController($(this));
 });
 
-$("#buscarUsuariosAll").on('click', function() {
-    buscarUsuariosAll();
+$("#buscaUsuario").on('click', function() {
+    buscaUsuarioController($(this));
+});
+
+$("#buscaUsuarioDel").on('click', function() {
+    buscaUsuarioController($(this));
+});
+
+$("#buscaUsuarioAlt").on('click', function() {
+    buscaUsuarioController($(this));
+});
+
+$('a[data-toggle="tab"]').on('click', function () {
+    limparUsuarioAlt();
+    limparUsuarioDel();
+    limparUsuarioResult();
 });
 
 $("#adicionarUsuario").on('click', function() {
     let usuario = {
         nome: $("#nomeUsuarioAdd").val(),
         email: $("#emailUsuarioAdd").val(),
+        cpf: $("#cpfUsuarioAdd").val(),
         categoria: {
             id: $("#categoriaUsuarioAdd option:selected").val()
         },
@@ -45,17 +57,14 @@ $("#adicionarUsuario").on('click', function() {
         telefone: $("#telefoneUsuarioAdd").val()
     };
 
-    let usuarioArray = new Array();
-    usuarioArray.push(usuario);
-
     adicionarUsuario(JSON.stringify(usuario));
-    
 });
 
 $("#alterarUsuario").on('click', function() {
     let usuario = {
-        id: $("#idUsuarioAlt").val(),
+        id: $("#codigoUsuarioAlt").val(),
         nome: $("#nomeUsuarioAlt").val(),
+        cpf: $("#cpfUsuarioAlt").val(),
         email: $("#emailUsuarioAlt").val(),
         categoria: {
             id: $("#categoriaUsuarioAlt").val()
@@ -72,56 +81,36 @@ $("#alterarUsuario").on('click', function() {
         telefone: $("#telefoneUsuarioAlt").val()
     };
 
-    let usuarioArray = new Array();
-    usuarioArray.push(usuario);
-
     alterarUsuario(JSON.stringify(usuario));
-    
 });
 
 $("#removerUsuario").on('click', function() {
-    let idUsuarioDel = $("#idUsuarioDel").val();
-    if (idUsuarioDel != ""){
-        $("#idUsuarioDel").html('');
-        removerUsuario(idUsuarioDel);
+    let emailUsuarioDel = $("#emailUsuarioDelTab").val();
+    if (emailUsuarioDel != ""){
+        $("#emailUsuarioDelTab").html('');
+        removerUsuario(emailUsuarioDel);
     }
 });
 
-$("#buscarUsuarioDel").on('click', function() {
-    let idUsuarioDel = $("#idUsuarioDel").val();
-    if (idUsuarioDel != "") {
-        $("#usuarioResult").html('');
-        buscarUsuarioDel(idUsuarioDel);
+function buscaUsuarioController(data) {
+    let email;
+    let resultTab;
+
+    if (data.attr("id") == "buscaUsuario" || data.attr("id") == "buscaUsuariosAll"){
+        email = $("#emailUsuarioTab").val();
+        resultTab = $("#usuarioResult");
+    } else if (data.attr("id") == "buscaUsuarioDel"){
+        email = $("#emailUsuarioDelTab").val();
+        resultTab = $("#usuarioResultDel");
+    } else if (data.attr("id") == "buscaUsuarioAlt"){
+        email = $("#emailUsuarioAltTab").val();
     }
-});
 
-$("#buscarUsuarioAlt").on('click', function() {
-    let idUsuarioAlt = $("#idUsuarioAlt").val();
-    if (idUsuarioAlt != ""){
-        buscarUsuarioAlt(idUsuarioAlt);
-    }
-
-});
-
-$("#limparUsuarioAdd").on('click', function() {
-    limparUsuarioAdd();
-});
-
-$("#limparUsuarioDel").on('click', function() {
-    limparUsuarioDel();
-});
-
-$("#limparUsuarioAlt").on('click', function() {
-    limparUsuarioAlt();
-});
-
-// FUNÇÃO QUE ORDENA POR GRUPO TABELA DE USUÁRIO
-$('#usuarioRows').on( 'click', 'tr.group', function () {
-    var currentOrder = table.order()[0];
-    if ( currentOrder[0] === groupColumn && currentOrder[1] === 'asc' ) {
-        table.order( [ groupColumn, 'desc' ] ).draw();
-    }
-    else {
-        table.order( [ groupColumn, 'asc' ] ).draw();
-    }
-} );
+    buscarUsuario(email, function (result) {
+        if (data.attr("id") == "buscaUsuarioAlt"){
+            preencherUsuarioAlt(result);
+        } else {
+            criarTabelaUsuario(resultTab, result);
+        }
+    });
+}

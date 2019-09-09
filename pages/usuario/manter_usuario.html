@@ -18,21 +18,17 @@
     <!-- Bootstrap Core Css -->
     <link href="../../assets/plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
 
-    <!-- Bootstrap Select Css -->
-    <link href="../../assets/plugins/bootstrap-select/css/bootstrap-select.css" rel="stylesheet"/>
+    <!-- Data Tables Css -->
+    <link href="../../assets/plugins/jquery-datatable/dataTables.min.css" rel="stylesheet" type="text/css"/>
 
     <!-- Waves Effect Css -->
     <link href="../../assets/plugins/node-waves/waves.css" rel="stylesheet"/>
 
     <!-- Animation Css -->
-    <link href="../../assets/plugins/animate-css/animate.css" rel="stylesheet"/>
+<!--    <link href="../../assets/plugins/animate-css/animate.css" rel="stylesheet"/>-->
 
-    <!-- Morris Chart Css-->
-    <link href="../../assets/plugins/morrisjs/morris.css" rel="stylesheet"/>
-
-    <!-- Data Tables Css -->
-    <link href="../../assets/plugins/jquery-datatable/skin/bootstrap/css/dataTables.bootstrap.css" rel="stylesheet"
-          type="text/css"/>
+    <!-- Bootstrap Select Css -->
+    <link href="../../assets/plugins/bootstrap-select/css/bootstrap-select.css" rel="stylesheet"/>
 
     <!-- SweetAlert Plugin CSS -->
     <link href="../../assets/plugins/sweetalert/sweetalert.css" rel="stylesheet" type="text/css"/>
@@ -55,6 +51,7 @@
                 <div class="circle-clipper left">
                     <div class="circle"></div>
                 </div>
+
                 <div class="circle-clipper right">
                     <div class="circle"></div>
                 </div>
@@ -119,6 +116,7 @@
             <div class="image">
                 <img alt="User" height="48" src="../../assets/images/user.png" width="48"/>
             </div>
+
             <div class="info-container">
                 <div aria-expanded="false" aria-haspopup="true" class="name" data-toggle="dropdown">Pedro Satore</div>
                 <div class="email">pedro.satore@bitscamp.com.br</div>
@@ -258,38 +256,37 @@
                         <div class="tab-content">
 
                             <!-- Tab Pane Encontrar Usuário-->
-                            <div class="tab-pane fade in active" id="encontrar" role="tabpanel">
+                            <div id="encontrar" class="tab-pane fade in active" role="tabpanel">
                                 <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="col-md-3">
-                                            <div class="box-col-group">
-                                                <label for="cpfUsuario">Código</label>
-                                                <div class="input-group">
-                                                    <div class="form-line focused">
-                                                        <input class="form-control" id="cpfUsuario" name="cpfUsuario"
-                                                               placeholder="Código do Usuário"
-                                                               type="text">
-                                                    </div>
-                                                    <span class="input-group-addon">
-                                                        <a href="javascript:void(0);" id="buscarUsuario">
+                                    <div class="col-md-4">
+                                        <div class="box-col-group">
+                                            <label for="emailUsuarioTab">E-mail</label>
+                                            <div class="input-group">
+                                                <div class="form-line focused">
+                                                    <input class="form-control" id="emailUsuarioTab"
+                                                           placeholder="E-mail do Usuário"
+                                                           type="text">
+                                                </div>
+                                                <span class="input-group-addon">
+                                                        <a href="javascript:void(0);" id="buscaUsuario">
                                                             <i class="material-icons">search</i>
                                                         </a>
                                                     </span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-9">
-                                            <div class="box-col-group">
-                                                <button class="btn bg-indigo waves-effect pull-right" id="buscarUsuariosAll"
-                                                        type="button">
-                                                    <i class="material-icons">search</i>
-                                                    <span>Buscar Tudo</span>
-                                                </button>
                                             </div>
                                         </div>
                                     </div>
+
+                                    <div class="col-md-8">
+                                        <div class="box-col-group">
+                                            <button class="btn bg-indigo waves-effect pull-right" id="buscaUsuariosAll"
+                                                    type="button">
+                                                <i class="material-icons">search</i>
+                                                <span>Buscar Tudo</span>
+                                            </button>
+                                        </div>
+                                    </div>
                                 </div>
+
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div id="usuarioResult">
@@ -301,10 +298,8 @@
 
                             <!-- Tab Pane Cadastrar Usuário-->
                             <div class="tab-pane fade" id="cadastrar" role="tabpanel">
-
                                 <div class="row">
-
-                                    <div class="col-md-3">
+                                    <div class="col-md-4">
                                         <div class="box-col-group">
                                             <label for="categoriaUsuarioAdd">Categoria</label>
                                             <select class="form-control" id="categoriaUsuarioAdd"
@@ -313,7 +308,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="col-md-9">
+                                    <div class="col-md-8">
                                         <div class="box-col-group">
                                             <button class="btn bg-green btn-circle-lg waves-effect waves-circle waves-float pull-right m-r-10"
                                                     id="adicionarUsuario"
@@ -361,14 +356,28 @@
 
                                     <div class="col-md-3">
                                         <div class="box-col-group">
-                                            <label for="estadoUsuarioAdd">Estado</label>
-                                            <select class="form-control" id="estadoUsuarioAdd">
-                                            </select>
+                                            <label for="cpfUsuarioAdd">CPF</label>
+                                            <div class="input-group">
+                                                <div class="form-line">
+                                                    <input class="form-control" id="cpfUsuarioAdd"
+                                                           name="cpfUsuarioAdd"
+                                                           placeholder="CPF do Usuário"
+                                                           type="text">
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="box-col-group">
+                                            <label for="estadoUsuarioAdd">Estado</label>
+                                            <select class="form-control" id="estadoUsuarioAdd">
+                                            </select>
+                                        </div>
+                                    </div>
+
                                     <div class="col-md-3">
                                         <div class="box-col-group">
                                             <label for="municipioUsuarioAdd">Municipio</label>
@@ -409,7 +418,9 @@
                                             </div>
                                         </div>
                                     </div>
+                                </div>
 
+                                <div class="row">
                                     <div class="col-md-3">
                                         <div class="box-col-group">
                                             <label for="telefoneUsuarioAdd">Telefone</label>
@@ -424,24 +435,23 @@
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
                             <!-- #END Tab Pane Cadastrar Usuário-->
 
                             <!-- Tab Pane Alterar Usuário-->
                             <div class="tab-pane fade" id="alterar" role="tabpanel">
                                 <div class="row">
-                                    <div class="col-md-3">
+                                    <div class="col-md-4">
                                         <div class="box-col-group">
-                                            <label for="idUsuarioAlt">Código</label>
+                                            <label for="emailUsuarioAltTab">E-mail</label>
                                             <div class="input-group">
                                                 <div class="form-line focused">
-                                                    <input class="form-control" id="idUsuarioAlt" name="idUsuarioAlt"
-                                                           placeholder="Código do Usuário"
+                                                    <input class="form-control" id="emailUsuarioAltTab"
+                                                           placeholder="E-mail do Usuário"
                                                            type="text">
                                                 </div>
                                                 <span class="input-group-addon">
-                                                    <a href="javascript:void(0);" id="buscarUsuarioAlt">
+                                                    <a href="javascript:void(0);" id="buscaUsuarioAlt">
                                                         <i class="material-icons">search</i>
                                                     </a>
                                                 </span>
@@ -449,7 +459,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="col-md-9">
+                                    <div class="col-md-8">
                                         <div class="box-col-group">
                                             <button class="btn bg-green btn-circle-lg waves-effect waves-circle waves-float pull-right m-r-10"
                                                     id="alterarUsuario"
@@ -461,6 +471,19 @@
                                 </div>
 
                                 <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="box-col-group">
+                                            <label for="codigoUsuarioAlt">Codigo</label>
+                                            <div class="input-group">
+                                                <div class="form-line focused">
+                                                    <input class="form-control" id="codigoUsuarioAlt"
+                                                           name="nomeUsuarioAlt" placeholder="Código do Usuário"
+                                                           type="text" readonly disabled>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                     <div class="col-md-3">
                                         <div class="box-col-group">
                                             <label for="nomeUsuarioAlt">Nome</label>
@@ -494,7 +517,9 @@
                                             </select>
                                         </div>
                                     </div>
+                                </div>
 
+                                <div class="row">
                                     <div class="col-md-3">
                                         <div class="box-col-group">
                                             <label for="perfilUsuarioAlt">Perfil</label>
@@ -503,9 +528,20 @@
                                         </div>
                                     </div>
 
-                                </div>
+                                    <div class="col-md-3">
+                                        <div class="box-col-group">
+                                            <label for="cpfUsuarioAlt">CPF</label>
+                                            <div class="input-group">
+                                                <div class="form-line">
+                                                    <input class="form-control" id="cpfUsuarioAlt"
+                                                           name="cpfUsuarioAlt"
+                                                           placeholder="CPF do Usuário"
+                                                           type="text">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 
-                                <div class="row">
                                     <div class="col-md-3">
                                         <div class="box-col-group">
                                             <label for="estadoUsuarioAlt">Estado</label>
@@ -527,7 +563,9 @@
                                             </div>
                                         </div>
                                     </div>
+                                </div>
 
+                                <div class="row">
                                     <div class="col-md-3">
                                         <div class="box-col-group">
                                             <label for="enderecoUsuarioAlt">Endereço</label>
@@ -554,9 +592,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                <div class="row">
                                     <div class="col-md-3">
                                         <div class="box-col-group">
                                             <label for="telefoneUsuarioAlt">Telefone</label>
@@ -577,32 +613,31 @@
                             <!-- Tab Pane Remover Usuário-->
                             <div class="tab-pane fade" id="remover" role="tabpanel">
                                 <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="col-md-3">
-                                            <div class="box-col-group">
-                                                <label for="idUsuarioDel">Código</label>
-                                                <div class="input-group">
-                                                    <div class="form-line focused">
-                                                        <input class="form-control" id="idUsuarioDel" name="idUsuarioDel"
-                                                               placeholder="Código do Usuário"
-                                                               type="text">
-                                                    </div>
-                                                    <span class="input-group-addon">
-                                                        <a href="javascript:void(0);" id="buscarUsuarioDel">
+                                    <div class="col-md-4">
+                                        <div class="box-col-group">
+                                            <label for="emailUsuarioDelTab">E-mail</label>
+                                            <div class="input-group">
+                                                <div class="form-line focused">
+                                                    <input class="form-control" id="emailUsuarioDelTab"
+                                                           placeholder="E-mail do Usuário"
+                                                           type="text">
+                                                </div>
+                                                <span class="input-group-addon">
+                                                        <a href="javascript:void(0);" id="buscaUsuarioDel">
                                                             <i class="material-icons">search</i>
                                                         </a>
                                                     </span>
-                                                </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-9">
-                                            <div class="box-col-group">
-                                                <button class="btn bg-red btn-circle-lg waves-effect waves-circle waves-float pull-right m-r-10"
-                                                        id="removerUsuario"
-                                                        type="button">
-                                                    <i class="material-icons">delete</i>
-                                                </button>
-                                            </div>
+                                    </div>
+
+                                    <div class="col-md-8">
+                                        <div class="box-col-group">
+                                            <button class="btn bg-red btn-circle-lg waves-effect waves-circle waves-float pull-right m-r-10"
+                                                    id="removerUsuario"
+                                                    type="button">
+                                                <i class="material-icons">delete</i>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
@@ -612,19 +647,15 @@
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
                             <!-- #END Tab Pane Remover Usuário-->
-
                         </div>
                         <!-- #END Tab Pane Content-->
-
                     </div>
                 </div>
             </div>
         </div>
         <!-- #END# Tabs With Icon Title -->
-
     </div>
 </section>
 
@@ -634,11 +665,8 @@
 <!-- Bootstrap Core Js -->
 <script src="../../assets/plugins/bootstrap/js/bootstrap.js"></script>
 
-<!-- Select Plugin Js -->
-<script src="../../assets/plugins/bootstrap-select/js/bootstrap-select.js"></script>
-
-<!-- Slimscroll Plugin Js -->
-<script src="../../assets/plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
+<!-- Jquery DataTables -->
+<script src="../../assets/plugins/jquery-datatable/dataTables.min.js"></script>
 
 <!-- Waves Effect Plugin Js -->
 <script src="../../assets/plugins/node-waves/waves.js"></script>
@@ -646,28 +674,8 @@
 <!-- SweetAlert Plugin Js -->
 <script src="../../assets/plugins/sweetalert/sweetalert.min.js"></script>
 
-<!-- Jquery CountTo Plugin Js -->
-<script src="../../assets/plugins/jquery-countto/jquery.countTo.js"></script>
-
-<!-- Morris Plugin Js -->
-<script src="../../assets/plugins/raphael/raphael.min.js"></script>
-<script src="../../assets/plugins/morrisjs/morris.js"></script>
-
-<!-- ChartJs -->
-<script src="../../assets/plugins/chartjs/Chart.bundle.js"></script>
-
-<!-- Flot Charts Plugin Js -->
-<script src="../../assets/plugins/flot-charts/jquery.flot.js"></script>
-<script src="../../assets/plugins/flot-charts/jquery.flot.resize.js"></script>
-<script src="../../assets/plugins/flot-charts/jquery.flot.pie.js"></script>
-<script src="../../assets/plugins/flot-charts/jquery.flot.categories.js"></script>
-<script src="../../assets/plugins/flot-charts/jquery.flot.time.js"></script>
-
-<!-- Sparkline Chart Plugin Js -->
-<script src="../../assets/plugins/jquery-sparkline/jquery.sparkline.js"></script>
-
-<!-- Jquery DataTables -->
-<script src="../../assets/plugins/jquery-datatable/jquery.dataTables.js"></script>
+<!-- Select Plugin Js -->
+<script src="../../assets/plugins/bootstrap-select/js/bootstrap-select.js"></script>
 
 <!-- Custom Js -->
 <script src="../../assets/js/admin.js"></script>
